@@ -15,15 +15,17 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
   z-index: 1;
 }
 .content>div{
   background: #0000;
+  transform: translate(-50%, 0);
 }
 .content>div>div{
+  /* position: relative; */
   backdrop-filter: blur(25px);
   width: 365px;
   height: 405px;
@@ -58,10 +60,11 @@ body {
 
 /* Teacher */
 
-/* 
-.teacher {
-  /* backdrop-filter: blur(15px); * /
-} */
+
+.content>div.teacher {
+  /* backdrop-filter: blur(15px); */
+  transform: translate(50%, 0);
+}
 
 /* Note: backdrop-filter has minimal browser support */
 
@@ -80,7 +83,7 @@ body {
   height: 307.1px;
   scale: 0.6;
   background: url('Images/teacher.svg');
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.41));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
 }
 
 
@@ -123,7 +126,7 @@ body {
   height: 307.1px;
   scale: 0.6;
   background: url('Images/student.svg');
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.41));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
 }
 
 /* Student */
