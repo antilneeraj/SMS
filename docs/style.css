@@ -15,14 +15,15 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   z-index: 1;
 }
 .content>div{
   background: #0000;
-  transform: translate(-50%, 0);
+  margin-left: 50px;
+  /* transform: translate(-50%, 0); */
 }
 .content>div>div{
   /* position: relative; */
@@ -62,8 +63,8 @@ body {
 
 
 .content>div.teacher {
-  /* backdrop-filter: blur(15px); */
-  transform: translate(50%, 0);
+  /* transform: translate(50%, 0); */
+  margin-right: 50px;
 }
 
 /* Note: backdrop-filter has minimal browser support */
@@ -71,7 +72,7 @@ body {
 
 /* Rectangle 1 */
 .rectangle1 {
-  /* background: rgba(171, 255, 227, 0.5); */
+  background: rgba(171, 255, 227, 0.3);
   box-shadow: inset 1px 4px 47px rgba(0, 0, 0, 0.06);
   border-radius: 76px;
 }
@@ -114,7 +115,7 @@ body {
 
 /* Rectangle 1 */
 .rectangle2 {
-  /* background: rgba(220, 236, 255, 0.5); */
+  background: rgba(220, 236, 255, 0.3);
   box-shadow: inset 1px 4px 47px rgba(0, 0, 0, 0.06);
   border-radius: 76px;
 }

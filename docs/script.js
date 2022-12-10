@@ -11,7 +11,7 @@ const getStyle = (elem, prop) => Number(getComputedStyle(elem)[prop].replace('px
       ['height', 'width'].forEach(dimen => {
         elem.style[dimen] = `${base[dimen] + 200}px`;
         altElem.style[dimen] = `${base[dimen] - 50}px`;
-        altElem.style[`margin${altElem===student?'Left':'Right'}`] = `275px`;
+        altElem.style[`margin${altElem===student?'Left':'Right'}`] = `-250px`;
         elem.style[`margin${altElem===student?'Right':'Left'}`] = 0;
         elem.parentElement.style.zIndex = '10';
         altElem.parentElement.style.zIndex = '5';
