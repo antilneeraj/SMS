@@ -13,6 +13,8 @@ const getStyle = (elem, prop) => Number(getComputedStyle(elem)[prop].replace('px
         altElem.style[dimen] = `${base[dimen] - 50}px`;
         altElem.style[`margin${altElem===student?'Left':'Right'}`] = `-250px`;
         elem.style[`margin${altElem===student?'Right':'Left'}`] = 0;
+        altElem.style.transform = `perspective(300px) rotatey(${altElem===student?'-':''}35deg)`;
+        elem.style.transform = '';
         elem.parentElement.style.zIndex = '10';
         altElem.parentElement.style.zIndex = '5';
         elem.children[2].style.scale = 0;
