@@ -4,7 +4,6 @@
 }
 
 body {
-  background: linear-gradient(252.92deg, #00DCEF 0.55%, #0284C4 38.36%, #0273BC 49.71%, #2285C5 61%, #D7E9F8 98.86%);
   backdrop-filter: blur(60px);
 }
 
@@ -51,7 +50,7 @@ body {
   position: absolute;
   z-index: -1;
   height: 100vh;
-  float: right;
+  width: 100vw;
 }
 
 .back img {
@@ -72,7 +71,7 @@ body {
 
 /* Rectangle 1 */
 .rectangle1 {
-  background: rgba(171, 255, 227, 0.3);
+  background: rgba(171, 255, 227, 0.4);
   box-shadow: inset 1px 4px 47px rgba(0, 0, 0, 0.06);
   border-radius: 76px;
 }
@@ -115,7 +114,7 @@ body {
 
 /* Rectangle 1 */
 .rectangle2 {
-  background: rgba(220, 236, 255, 0.3);
+  background: rgba(220, 236, 255, 0.4);
   box-shadow: inset 1px 4px 47px rgba(0, 0, 0, 0.06);
   border-radius: 76px;
 }
