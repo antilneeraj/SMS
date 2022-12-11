@@ -92,13 +92,13 @@ const params = new URL(window.location).searchParams;
 if(params.get('user')==='teacher'){
   teacher.click();
   ['uid', 'password'].forEach(param => {
-    const elem = [...teacher.querySelectorAll('*')].filter(elem => elem.name===param);
+    const elem = [...teacher.querySelectorAll('*')].filter(elem => elem.name===param)[0];
     elem.value=params.get(param) ?? '';
   })
 }else if(params.get('user')==='student'){
   student.click();
   ['roll', 'date'].forEach(param => {
-    const elem = [...student.querySelectorAll('*')].filter(elem => elem.name===param);
+    const elem = [...student.querySelectorAll('*')].filter(elem => elem.name===param)[0];
     elem.value=(param==='roll'?params.get(param)??'':params.get('date')?params.get('date').slice(4, 8)+'-'+params.get('date').slice(2, 4)+'-'+params.get('date').slice(0, 2):'');
   })
 };
