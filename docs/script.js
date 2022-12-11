@@ -91,18 +91,14 @@ document.addEventListener('mousemove', e => {
 const params = new URL(window.location).searchParams;
 if(params.get('user')==='teacher'){
   teacher.click();
-
-  const uid = [...teacher.querySelectorAll('*')].filter(elem => elem.name==='uid')[0];
-  uid.value=params.get('uid') ?? '';
-
-  const password = [...teacher.querySelectorAll('*')].filter(elem => elem.name==='password')[0];
-  password.value=params.get('password') ?? '';
+  ['uid', 'password'].forEach(param => {
+    const elem = [...teacher.querySelectorAll('*')].filter(elem => elem.name===param);
+    elem.value=params.get(param) ?? '';
+  })
 }else if(params.get('user')==='student'){
   student.click();
-
-  const roll = [...student.querySelectorAll('*')].filter(elem => elem.name==='roll')[0];
-  roll.value=params.get('roll') ?? '';
-
-  const date = [...student.querySelectorAll('*')].filter(elem => elem.name==='date')[0];
-  date.value=params.get('date')?params.get('date').slice(4, 8)+'-'+params.get('date').slice(2, 4)+'-'+params.get('date').slice(0, 2):'';
+  ['roll', 'date'].forEach(param => {
+    const elem = [...student.querySelectorAll('*')].filter(elem => elem.name===param);
+    elem.value=(param==='roll'?params.get(param)??'':params.get('date')?params.get('date').slice(4, 8)+'-'+params.get('date').slice(2, 4)+'-'+params.get('date').slice(0, 2):'');
+  })
 };
