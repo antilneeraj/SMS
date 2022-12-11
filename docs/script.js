@@ -1,7 +1,7 @@
 const student = document.querySelector('.rectangle2');
 const teacher = document.querySelector('.rectangle1');
 const lights = [...document.querySelectorAll('.light')];
-const base = {height: 405, width: 365}
+const base = {height: 405, width: 365};
 
 const getStyle = (elem, prop) => Number(getComputedStyle(elem)[prop].replace('px', ''));
 [teacher, student].forEach(elem => 
@@ -30,10 +30,12 @@ const getStyle = (elem, prop) => Number(getComputedStyle(elem)[prop].replace('px
       if(elem===student){
         const roll = document.createElement('input');
         roll.type='number';
-        roll.placeholder="Roll Number"
+        roll.name='roll';
+        roll.placeholder="Roll Number";
 
         const date = document.createElement('input');
         date.type='date';
+        date.name='date';
 
         roll.classList.add('input', 'roll');
         date.classList.add('input', 'date');
@@ -42,10 +44,12 @@ const getStyle = (elem, prop) => Number(getComputedStyle(elem)[prop].replace('px
       }else{
         const uid = document.createElement('input');
         uid.type='text';
+        uid.name='uid';
         uid.placeholder='User ID';
 
         const password = document.createElement('input');
         password.type='password';
+        password.name='password';
         password.placeholder='Password';
 
         uid.classList.add('input');
@@ -82,3 +86,23 @@ document.addEventListener('mousemove', e => {
     light.style.top = `${e.clientY - light.parentElement.getBoundingClientRect().top}px`;
   })
 })
+
+
+const params = new URL(window.location).searchParams;
+if(params.get('user')==='teacher'){
+  teacher.click();
+
+  const uid = [...teacher.querySelectorAll('*')].filter(elem => elem.name==='uid')[0];
+  uid.value=params.get('uid') ?? '';
+
+  const password = [...teacher.querySelectorAll('*')].filter(elem => elem.name==='password')[0];
+  password.value=params.get('password') ?? '';
+}else if(params.get('user')==='student'){
+  student.click();
+
+  const roll = [...student.querySelectorAll('*')].filter(elem => elem.name==='roll')[0];
+  roll.value=params.get('roll') ?? '';
+
+  const date = [...student.querySelectorAll('*')].filter(elem => elem.name==='date')[0];
+  date.value=params.get('date')?params.get('date').slice(4, 8)+'-'+params.get('date').slice(2, 4)+'-'+params.get('date').slice(0, 2):'';
+};
