@@ -6,11 +6,12 @@ const base = {height: 405, width: 365};
 
 // Input Element
 
-function input(name, type, placeholder, ...classList){
+function input(name, type, placeholder, required, ...classList){
   const input = document.createElement('input');
   input.name=name;
   input.type=type;
   input.placeholder=placeholder;
+  input.required=required;
   input.classList.add(...classList)
   
   return input
@@ -43,11 +44,11 @@ function input(name, type, placeholder, ...classList){
 
       let input1, input2;
       if(elem===student){
-        input1 = input('number', 'roll', 'Roll Number', 'input', 'roll');
-        input2 = input('date', 'date', '', 'input', 'date');
+        input1 = input('number', 'roll', 'Roll Number', true, 'input', 'roll');
+        input2 = input('date', 'date', '', true, 'input', 'date');
       }else{
-        input1 = input('text', 'uid', 'User ID', 'input');
-        input2 = input('password', 'password', 'Password', 'input');
+        input1 = input('text', 'uid', 'User ID', true, 'input');
+        input2 = input('password', 'password', 'Password', true, 'input');
       }
 
       form.append(input1, input2);
