@@ -33,6 +33,8 @@ body{
 .box{
   transform: translate(0, 20px);
   transition: transform .4s;
+  color: black;
+  text-decoration: none;
   cursor: pointer;
 }
 .box:hover{
