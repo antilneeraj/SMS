@@ -3,6 +3,9 @@ const teacher = document.querySelector('.rectangle1');
 const lights = [...document.querySelectorAll('.light')];
 const base = {height: 405, width: 365};
 
+
+// Input Element
+
 function input(name, type, placeholder, ...classList){
   const input = document.createElement('input');
   input.name=name;
@@ -15,7 +18,8 @@ function input(name, type, placeholder, ...classList){
 
 [teacher, student].forEach(elem => 
   elem.addEventListener('click', e => {
-    if(!elem.clicked){
+    if(!elem.clicked){       
+      // Styles
       const altElem = (elem===teacher?student:teacher);
       altElem.form?.remove();
       ['height', 'width'].forEach(dimen => {
@@ -31,6 +35,8 @@ function input(name, type, placeholder, ...classList){
         elem.children[1].style.scale = .4;
         altElem.children[2].style.scale = altElem.children[1].style.scale = .6;
       })
+
+      // Form 
 
       const form = document.createElement('form');
       form.classList.add('form');
@@ -67,22 +73,28 @@ function input(name, type, placeholder, ...classList){
   })
 )
 
+// for light with cursor
+
 document.addEventListener('mousemove', e => 
   lights.forEach(light => {
     light.style.display = 'block';
     ['left', 'top'].forEach(dimen => light.style[dimen] = `${e[`client${dimen==='left'?'X':'Y'}`] - light.parentElement.getBoundingClientRect()[dimen]}px`)
   })
+
+  // NOTE: the light elements are relatively positioned in order to follow overflow: hidden; therefore we had to subtract the parent element's top and left margins with cursor's X and Y positions respectively.
 )
 
+
+// Autofill
 
 const params = new URL(window.location).searchParams;
 if(params.get('user')==='teacher' && !teacher.click())
   ['uid', 'password'].forEach(param => {
-    const elem = [...teacher.querySelectorAll('*')].filter(elem => elem.name===param)[0];
-    elem.value=params.get(param) ?? '';
+    const elem = [...teacher.querySelectorAll('*')].filter(elem => elem.name===param)[0];      // got the element
+    elem.value=params.get(param) ?? '';                                                        // set value
   })
 else if(params.get('user')==='student' && !student.click())
   ['roll', 'date'].forEach(param => {
-    const elem = [...student.querySelectorAll('*')].filter(elem => elem.name===param)[0];
-    elem.value=(param==='roll'?params.get(param)??'':params.get('date')?`${params.get('date').slice(4, 8)}-${params.get('date').slice(2, 4)}-${params.get('date').slice(0, 2)}`:'');
+    const elem = [...student.querySelectorAll('*')].filter(elem => elem.name===param)[0];      // got the element
+    elem.value=(param==='roll'?params.get(param)??'':params.get('date')?`${params.get('date').slice(4, 8)}-${params.get('date').slice(2, 4)}-${params.get('date').slice(0, 2)}`:'');   // set value
   })
