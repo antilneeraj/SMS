@@ -58,6 +58,23 @@ body {
   height: 100%;
 }
 
+.backBtn{
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  border-radius: 10px;
+  background: gray;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform .3s;
+}
+.backBtn:hover{
+  transform: scale(1.1);
+}
+
 /* Teacher */
 
 
