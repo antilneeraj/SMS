@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="shortcut icon" href="icons/teacher.ico" type="image/x-icon">
     <link rel="stylesheet" href="dashboard.css">
 
@@ -12,85 +13,66 @@
 </head>
 
 <body>
+    <img top-ellipse src="icons/top-ellipse.svg" alt="">
+    <div class="background">
+        <img src="icons/back-ellipse1.svg" alt="">
+        <img src="icons/back-ellipse2.svg" alt="">
+    </div>
     <div class="white">
-        <div class="search-group">
-            <div class="icon-search">
-                <lord-icon src="https://cdn.lordicon.com/hursldrn.json" trigger="morph"
-                    colors="primary:#6159e6,secondary:#cb5eee" style="width:50px;height:35px">
-                </lord-icon>
+        <div class="left-nav">
+            <div firstdiv>
+                <div class="site-logo">
+                    <span style=" font-size: 30px;">SMS</span>
+                    <span style="color: rgba(64, 50, 187, 0.849);  font-size: 30px;">.com
+                    </span>
+                </div>
+                <a href="javascript:void(0)" id="btn-student"
+                    onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+                    <div class="add-btn">
+                        Add student
+                    </div>
+                </a>
+                <div class="menu-group ">
+                    <div>Dashboard</div>
+                    <div>Announcements</div>
+                    <div>Lesson Plan</div>
+                    <div>Students</div>
+                </div>
             </div>
-            <div class="serach">
-                <input type="text">
-            </div>
-            <div class="notification">
-                <img src="icons/bell.png" alt="bellIcon" style="height: 20px;">
+
+            <div>
+                <div class="user-group">
+                    <div class="user-logo" style="display: flex; align-items: center;">
+                        <img src="icons/teacher.svg" alt="logo">
+                        <p style="margin-left: 10px;">Sunita Lather</p>
+                    </div>
+
+                    <div class="logout-btn">
+                        Logout
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="top-group">
-            <!-- <div class="dashboard">
-                <div><p>Dashboard</p></div>
-                <div class="dashboard-content"> -->
 
+        <div class="main">
+            <div class="search-group">
+                <div class="icon-search">
+                    <lord-icon src="https://cdn.lordicon.com/hursldrn.json" trigger="morph"
+                        colors="primary:#6159e6,secondary:#cb5eee" style="width:50px;height:35px">
+                    </lord-icon>
+                </div>
+                <div class="search">
+                    <input type="text">
+                </div>
+                <div class="notification">
+                    <img src="icons/bell.png" alt="bellIcon" style="height: 20px;">
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="groups">
-
-    </div>
-    <div class="progress">
-
-    </div>
     </div>
 
     <!-- left Side Navigation  -->
-    <div class="left-nav">
-        <div class="site-logo">
-            <span style=" font-size: 30px;">SMS</span>
-            <span style="color: rgba(64, 50, 187, 0.849);  font-size: 30px;">.com
-            </span>
-            <a href="javascript:void(0)" id="btn-student"
-                onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-                <div class="add-btn">
-                    <p> Add student</p>
-                </div>
-            </a>
-        </div>
-        <div class="menu-group ">
-            <ul>
-                <div class="div1 active">
-                    <li><a href="#">Dashboard</a></li>
-                </div>
-                <div class="div1">
-                    <li><a href="#">Lessons</a></li>
-                </div>
-                <div class="div1">
-                    <li><a href="#">Groups</a></li>
-                </div>
-                <div class="div1">
-                    <li><a href="#">Materials</a></li>
-                </div>
-                <div class="div1">
-                    <li><a href="#">Semester</a></li>
-                </div>
-                <div class="div1">
-                    <li><a href="#">Inbox</a></li>
-                </div>
-            </ul>
-        </div>
-        <div class="user-group">
-            <div class="user-logo" style="display: flex; align-items: center;">
-                <img src="/image/Group 9.png" alt="logo">
-                <p style="margin-left: 10px;">Sunita Lather <br> Teacher</p>
 
-            </div>
-
-
-
-            <div class="logout-btn">
-                <p>Logout</p>
-            </div>
-        </div>
-    </div>
-    </div>
 
     <!-- -------------------ADD Student Section---------------- -->
 
@@ -100,8 +82,7 @@
 
                 <a cross href="javascript:void(0)"
                     onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><img
-                        src="/teacher/icons/delete.png" alt="close-logo" height="15px" width="15px"
-                        class="close-logo"></a>
+                        src="icons/delete.png" alt="close-logo" height="15px" width="15px" class="close-logo"></a>
 
                 <div class="top-heading">
                     <p>STUDENT DETAILS</p>
