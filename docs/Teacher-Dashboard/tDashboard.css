@@ -48,7 +48,7 @@ img[top-ellipse] {
     position: absolute;
     left: 50%;
     top: 50%;
-    overflow: hidden;
+    /* overflow: hidden; */
     transform: translate(-50%, -50%);
     backdrop-filter: blur(8px);
 }
