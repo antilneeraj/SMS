@@ -9,7 +9,7 @@ body {
     height: 100vh;
 }
 
-/* Bubble Back */
+/* Background Bubbles */
 
 .background {
     height: 100%;
@@ -35,7 +35,7 @@ img[top-ellipse] {
     z-index: 10;
 }
 
-/* Sarra ka parent */
+/* Saab ka parent */
 
 .white {
     height: calc(100vh - 70px);
@@ -97,7 +97,6 @@ img[top-ellipse] {
     display: flex;
     align-items: center;
     padding-left: 40px;
-    /* border-left: 3px solid #0000; */
 }
 
 .menu-group div:hover {
@@ -120,26 +119,37 @@ img[alt='logo'] {
     padding: 35px;
 }
 
-/* Search AAla */
+/* Search Section */
 
 .search-group {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
 }
 
 .search-group input[type='text'] {
-    padding: 15px;
+    padding: 15px 15px 15px 50px;
     border-radius: 10px;
+    background: rgba(255, 255, 255, .5);
     border: none;
     outline: none;
     margin-right: 20px;
 }
 
 .icon-search {
-    transform: translate(90%, 0);
+    transform: translate(150%, 0);
+}
+
+.notification{
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border: none;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+
 }
 
 /* Add Student Button */

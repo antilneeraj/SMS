@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="shortcut icon" href="icons/teacher.ico" type="image/x-icon">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="tDashboard.css">
 
     <title>Teacher Dashboard</title>
 </head>
@@ -19,6 +19,8 @@
         <img src="icons/back-ellipse2.svg" alt="">
     </div>
     <div class="white">
+
+        <!-- left Side Navigation  -->
         <div class="left-nav">
             <div firstdiv>
                 <div class="site-logo">
@@ -54,25 +56,22 @@
             </div>
         </div>
 
+        <!-- -----------Search and Notification---------- -->
+
         <div class="main">
             <div class="search-group">
                 <div class="icon-search">
-                    <lord-icon src="https://cdn.lordicon.com/hursldrn.json" trigger="morph"
-                        colors="primary:#6159e6,secondary:#cb5eee" style="width:50px;height:35px">
-                    </lord-icon>
+                    <img src="icons/search.svg" alt="sIcon">
                 </div>
                 <div class="search">
-                    <input type="text">
+                    <input type="text" placeholder="Search">
                 </div>
                 <div class="notification">
-                    <img src="icons/bell.png" alt="bellIcon" style="height: 20px;">
+                    <img src="icons/bell.svg" alt="bellIcon" style="height: 20px;">
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- left Side Navigation  -->
-
 
     <!-- -------------------ADD Student Section---------------- -->
 
@@ -80,9 +79,9 @@
         <div id="light" class="white_content">
             <form action="">
 
-                <a cross href="javascript:void(0)"
-                    onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><img
-                        src="icons/delete.png" alt="close-logo" height="15px" width="15px" class="close-logo"></a>
+                <a cross href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+                    <img src="icons/delete.png" alt="close-logo" height="15px" width="15px" class="close-logo">
+                </a>
 
                 <div class="top-heading">
                     <p>STUDENT DETAILS</p>
@@ -161,8 +160,6 @@
         </div>
     </div>
     <!-- ---------------------DONE------------------------- -->
-
-    <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
 
 </body>
 
