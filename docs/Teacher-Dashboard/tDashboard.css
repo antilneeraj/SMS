@@ -110,48 +110,6 @@ img[alt='logo'] {
     border-radius: 50%;
 }
 
-/* Right major */
-
-.main {
-    position: relative;
-    z-index: 20;
-    width: 100%;
-    padding: 35px;
-}
-
-/* Search Section */
-
-.search-group {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.search-group input[type='text'] {
-    padding: 15px 15px 15px 50px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, .5);
-    border: none;
-    outline: none;
-    margin-right: 20px;
-}
-
-.icon-search {
-    transform: translate(150%, 0);
-}
-
-.notification{
-    height: fit-content;
-    width: fit-content;
-    padding: 12px;
-    border: none;
-    background: rgba(255, 255, 255, .5);
-    border-radius: 10px;
-
-}
-
 /* Add Student Button */
 
 .add-btn {
@@ -200,7 +158,81 @@ img[alt='logo'] {
     background-color: white;
 }
 
-/* --------------Add student block/POPUP styles----------------------- */
+/* Right major */
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    z-index: 20;
+    width: 100%;
+    padding: 35px;  
+}
+
+/* Search Section */
+
+.search-group {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-group input[type='text'] {
+    padding: 15px 15px 15px 50px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .4);
+    border: none;
+    outline: none;
+    margin-right: 20px;
+}
+
+.search-group input[type='text']::placeholder{
+    color: black;
+}
+
+.icon-search {
+    transform: translate(150%, 0);
+}
+
+/* Notification Box */
+
+.notification{
+    height: fit-content;
+    width: fit-content;
+    padding: 11.5px;
+    border: none;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* TimeTable & Calendar */
+
+.tcContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:fit-content;
+}
+
+.tTable{
+    height: 350px;
+    width: 350px;
+    background:rgba(255, 255, 255, .4);
+    border-radius: 28px;
+}
+
+.calendar{
+    height: 350px;
+    width: 350px;
+    background:rgba(255, 255, 255, .4);
+    border-radius: 28px;
+}
+
+/* --------------Add student block/POPUP styles---------------- */
 
 .blur-background {
     width: 100vw;
