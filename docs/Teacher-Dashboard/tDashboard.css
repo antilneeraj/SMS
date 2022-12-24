@@ -30,9 +30,10 @@ body {
 
 img[top-ellipse] {
     position: absolute;
-    right: 0;
-    top: 5px;
-    z-index: 10;
+    right: -35px;
+    top: -30px;
+    z-index: 1;
+    /* transform: translate(-80%,0); */
 }
 
 /* Saab ka parent */
@@ -41,7 +42,6 @@ img[top-ellipse] {
     height: calc(100vh - 70px);
     width: calc(100vw - 70px);
     border-radius: 28px;
-    overflow: hidden;
     display: flex;
     flex-flow: row;
     background: rgba(255, 255, 255, .2);
@@ -56,6 +56,7 @@ img[top-ellipse] {
     background: rgba(255, 255, 255, .2);
     box-sizing: border-box;
     padding: 60px 0;
+    border-radius: 28px 0 0 28px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -167,7 +168,7 @@ img[alt='logo'] {
     flex-flow: column;
     z-index: 20;
     width: 100%;
-    padding: 35px;  
+    padding: 35px;
 }
 
 /* Search Section */
@@ -209,24 +210,48 @@ img[alt='logo'] {
     cursor: pointer;
 }
 
-/* TimeTable & Calendar */
+/* Main Containers */
 
 .tcContainer{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height:fit-content;
 }
 
+.caProgress{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    height: fit-content;
+}
+
+.Progress{
+    height: 225px;
+    width: 350px;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pContainer{
+    height: calc(100% - 50px);
+    width: calc(100% - 50px);
+    background: #CE86E3;
+    border-radius: 28px;
+}
+
 .tTable{
-    height: 350px;
+    height: 275px;
     width: 350px;
     background:rgba(255, 255, 255, .4);
     border-radius: 28px;
 }
 
 .calendar{
-    height: 350px;
+    height: 275px;
     width: 350px;
     background:rgba(255, 255, 255, .4);
     border-radius: 28px;
