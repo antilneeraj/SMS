@@ -5,6 +5,27 @@
 
 body {
   backdrop-filter: blur(60px);
+    background: linear-gradient(to bottom, #E891C8, #7B3CAF);
+}
+
+/* Background Bubbles */
+
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.background img:first-child {
+  height: 200px;
+}
+
+.background img:last-child {
+  align-self: flex-end;
+  height: 300px;
 }
 
 /* Main */
@@ -64,8 +85,8 @@ body {
   height: 60px;
   width: 60px;
   position: fixed;
-  left: 20px;
-  top: 20px;
+  left: 40px;
+  top: 40px;
   cursor: pointer;
   z-index: 50;
   border-radius: 10px;
