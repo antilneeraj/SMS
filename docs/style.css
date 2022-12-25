@@ -45,6 +45,7 @@ img[bottom-ellipse] {
   position: absolute;
   height: 100%;
   width: 100%;
+  transform: translate(-40px, -40px);
   background: rgb(205, 205, 205, .4);
   backdrop-filter: blur(10px);
   display: flex;
