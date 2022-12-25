@@ -6,7 +6,34 @@
 body{
   background: url("Images/background.svg");
   font-family: 'Trebuchet MS', sans-serif;
-  padding: 40px;
+}
+
+/* Loading */
+
+.loading{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(205, 205, 205, .4);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity .4s;
+}
+.logo{
+  background: url('Images/homeIcon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 75px;
+  width: 75px;
+}
+.text{
+  font-family: courier;
+  font-weight: 700;
 }
 
 /* Main */
@@ -14,6 +41,10 @@ body{
 .main{
   min-height: calc(100vh - 80px);
   width: calc(100vw - 80px);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
   border-radius: 25px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.862), #0000);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .3)
@@ -34,6 +65,10 @@ body{
   transform: translate(0, 20px);
   transition: transform .4s;
   color: black;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
   text-decoration: none;
   cursor: pointer;
 }
@@ -43,17 +78,24 @@ body{
 .box .text{
   transform: translate(0, -5px);
 }
-.items:first-child{
-  height: 40px;
-  width: 40px;
+.i1{
   background-image: url('Images/homeIcon.svg');
+}
+.i2.items{
+  background-image: url('Images/collegeLogo.png');
+  background-size: 25px;
+}
+.i3.items{
+  background-image: url('Images/AboutUs.svg');
+  background-size: 25px;
+}
+.items{
+  font-weight: 500;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-}
-.items{
-  margin-right: 25px;
-  font-weight: 500;
+  height: 40px;
+  width: 40px;
 }
 .loginBtn{
   height: 30px;
