@@ -57,16 +57,17 @@ img[bottom-ellipse] {
 }
 
 .logo {
-  background: url('Images/homeIcon.svg');
+  background: url('Images/collegeLogo.png');
   background-repeat: no-repeat;
   background-size: contain;
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
 }
 
 .text {
-  font-family: courier;
+  font-family: 'Trebuchet MS', sans-serif;
   font-weight: 700;
+  margin-top: 10px;
 }
 
 
