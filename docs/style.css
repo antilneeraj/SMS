@@ -1,16 +1,47 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
-  background: url("Images/background.svg");
+body {
+  background: linear-gradient(to bottom, #E891C8, #7B3CAF);
   font-family: 'Trebuchet MS', sans-serif;
+  padding: 40px;
 }
+
+/* Background Bubbles */
+
+.background {
+  position: absolute;
+  transform: translate(-40px, -40px);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.background img:first-child {
+  height: 200px;
+}
+
+.background img:last-child {
+  align-self: flex-end;
+  height: 300px;
+}
+
+img[bottom-ellipse] {
+  position: absolute;
+  height: 150px;
+  left: -35px;
+  bottom: -30px;
+  z-index: 1;
+}
+
 
 /* Loading */
 
-.loading{
+.loading {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -24,35 +55,35 @@ body{
   opacity: 1;
   transition: opacity .4s;
 }
-.logo{
+
+.logo {
   background: url('Images/homeIcon.svg');
   background-repeat: no-repeat;
   background-size: contain;
   height: 75px;
   width: 75px;
 }
-.text{
+
+.text {
   font-family: courier;
   font-weight: 700;
 }
 
+
 /* Main */
 
-.main{
+.main {
+  position: relative;
   min-height: calc(100vh - 80px);
   width: calc(100vw - 80px);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
   border-radius: 25px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.862), #0000);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, .3)
+  background: rgba(255, 255, 255, .2);
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, .3) */
 }
 
 /* navBar */
 
-.navBar{
+.navBar {
   height: 60px;
   display: flex;
   padding-top: 10px;
@@ -61,7 +92,8 @@ body{
   align-items: center;
   overflow: hidden;
 }
-.box{
+
+.box {
   transform: translate(0, 20px);
   transition: transform .4s;
   color: black;
@@ -72,24 +104,30 @@ body{
   text-decoration: none;
   cursor: pointer;
 }
-.box:hover{
+
+.box:hover {
   transform: none;
 }
-.box .text{
+
+.box .text {
   transform: translate(0, -5px);
 }
-.i1{
+
+.i1 {
   background-image: url('Images/homeIcon.svg');
 }
-.i2.items{
+
+.i2.items {
   background-image: url('Images/collegeLogo.png');
   background-size: 25px;
 }
-.i3.items{
+
+.i3.items {
   background-image: url('Images/AboutUs.svg');
   background-size: 25px;
 }
-.items{
+
+.items {
   font-weight: 500;
   background-repeat: no-repeat;
   background-size: contain;
@@ -97,45 +135,57 @@ body{
   height: 40px;
   width: 40px;
 }
-.loginBtn{
-  height: 30px;
-  width: 100px;
+
+.loginBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: hotpink;
-  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  background-color: #7D3DAF;
+  border-radius: 10px;
   text-decoration: none;
   color: white;
   font-size: 18px;
+  transition: box-shadow .4s, background-color .4s, color .1s;;
+}
+
+.loginBtn:hover {
+  color: rgb(64, 50, 187);
+  box-shadow: 1px 1px 10px gray;
+  background-color: white;
 }
 
 /* Landing */
 
-.landing{
+.landing {
   display: flex;
   justify-content: space-between;
 }
-.sidePic{
-  margin-right: 70px;
+
+.sidePic {
+  margin:50px 70px;
 }
-.sideText{
-  margin-left: 50px;
+
+.sideText {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left:50px;
 }
-.name{
-  font-family: 'omega sans';
-  font-size: 60px;
+
+.utitle{
+  display: flex;
+  flex-flow: column wrap;
+  height: fit-content;
+  width: 500px;
+  margin-top: 5px;
 }
-.welcome{
-  display: inline-block;
-  font-size: 25px;
-  color: gray;
-}
-.welcome::after{
-  content: '';
-  height: 1.5px;
-  background: blue;
-  width: 90px;
-  display: block;
-  margin-left: calc(100% - 60px);
+
+.title{
+  width: fit-content;
+  font-family: 'Trebuchet MS';
+  font-size: 35px;
 }
