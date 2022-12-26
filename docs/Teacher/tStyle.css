@@ -31,7 +31,7 @@ body {
 img[top-ellipse] {
     position: absolute;
     right: -35px;
-    top: -30px;
+    top: -35px;
     z-index: 1;
 }
 
@@ -91,12 +91,22 @@ img[top-ellipse] {
     flex-flow: column nowrap;
     margin: 30px 0 0 0;
 }
-
+.activeDiv {
+    background: rgba(166, 149, 255, .3);
+    border-left: 3px solid #6159E6;
+}
 .menu-group div {
     height: 50px;
     display: flex;
     align-items: center;
     padding-left: 40px;
+}
+.menu-group div a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Inter;
 }
 
 .menu-group div:hover {
@@ -170,6 +180,13 @@ img[alt='logo'] {
     padding: 35px;
 }
 
+.main > *:last-child {
+    display: flex;
+    margin-top: 35px;
+    width: 100%;
+    height: 100%;
+}
+
 /* Search Section */
 
 .search-group {
@@ -207,53 +224,6 @@ img[alt='logo'] {
     background: rgba(255, 255, 255, .4);
     border-radius: 10px;
     cursor: pointer;
-}
-
-/* Main Containers */
-
-.tcContainer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height:fit-content;
-}
-
-.caProgress{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-evenly;
-    height: fit-content;
-}
-
-.Progress{
-    height: 225px;
-    width: 350px;
-    background: rgba(255, 255, 255, .4);
-    border-radius: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pContainer{
-    height: calc(100% - 50px);
-    width: calc(100% - 50px);
-    background: #CE86E3;
-    border-radius: 28px;
-}
-
-.tTable{
-    height: 275px;
-    width: 350px;
-    background:rgba(255, 255, 255, .4);
-    border-radius: 28px;
-}
-
-.calendar{
-    height: 275px;
-    width: 350px;
-    background:rgba(255, 255, 255, .4);
-    border-radius: 28px;
 }
 
 /* --------------Add student block/POPUP styles---------------- */
