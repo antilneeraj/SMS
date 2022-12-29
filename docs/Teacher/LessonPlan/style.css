@@ -7,7 +7,6 @@ table{
     border-radius: 28px;
     text-align: center;
     overflow: hidden;
-    /* border: 1px solid gray; */
 }
 th, td{
     padding: 10px;
