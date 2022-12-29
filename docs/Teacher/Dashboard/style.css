@@ -25,11 +25,8 @@
     height: fit-content;
 }
 
-.Progress{
+.box.Progress{
     height: 225px;
-    width: 350px;
-    background: rgba(255, 255, 255, .4);
-    border-radius: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,8 +40,9 @@
 }
 
 .box{
+    box-sizing: border-box;
     height: 275px;
-    width: 350px;
+    width: 31.03678929765886%;
     background:rgba(255, 255, 255, .4);
     border-radius: 28px;
 }
