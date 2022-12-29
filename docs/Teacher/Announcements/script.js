@@ -10,6 +10,7 @@ window.addEventListener('load', e => {
         slider.style.marginLeft = width + 'px';
     }))
 
+    children[0].click()
 // Aligning Add Button
 
     const add = document.querySelector('#add');
