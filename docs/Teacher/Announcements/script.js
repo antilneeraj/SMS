@@ -1,14 +1,19 @@
+window.addEventListener('load', e => {
+    const children = [...document.querySelector('.nav').children].splice(1, 3);
+    const slider = document.querySelector('.nav').firstElementChild;
 
-const children = [...document.querySelector('.nav').children].splice(0, 3);
-const slider = document.querySelector('.nav').lastElementChild;
-let selected;
+    children.forEach(child => child.addEventListener('click', function (e) {
+        slider.style.height = child.getBoundingClientRect().height + 'px';
+        slider.style.width = child.getBoundingClientRect().width + 'px';
+        let width = 0;
+        ([...children].splice(0, children.indexOf(child)).forEach(child => width+=child.getBoundingClientRect().width))
+        slider.style.marginLeft = width + 'px';
+    }))
 
-selected.defineSetter(function (val) {
-    slider.style.height = val.getBoundingClientRect().height+'px';
-    slider.style.width = val.getBoundingClientRect().width+'px';
-    slider.style.left = val.getBoundingClientRect().left-slider.getBoundingClientRect().left+'px';
+// Aligning Add Button
+
+    const add = document.querySelector('#add');
+    add.style.marginTop = add.parentElement.getBoundingClientRect().height - add.getBoundingClientRect().height - 10 + 'px'
+
+    add.style.marginLeft = add.parentElement.getBoundingClientRect().width - add.getBoundingClientRect().width - 10 + 'px';
 })
-
-selected = children[0];
-
-children.forEach(child => child.addEventListener('click', e=>selected=child))

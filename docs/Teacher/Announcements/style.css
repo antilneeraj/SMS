@@ -38,15 +38,18 @@ img[add]{
 /* Elements of NavBar */
 
 .aContainer .nav div{
+    position: relative;
+    z-index: 5;
     padding: 20px 40px;
     border-radius: 28px 28px 0 0;
+    cursor: pointer;
 }
 
 /* Slider on NavBar */
 
 .nav div.slider{
-    position: relative;
-    transition: left .4s ease-in-out;
+    position: absolute;
+    transition: margin-left .4s ease-in-out, width .4s;
     background: rgba(255, 255, 255, .4);
     padding: 0;
 }
@@ -71,13 +74,11 @@ img[add]{
     background: rgba(255, 255, 255, .4);
     margin-top: 20px;
 }
-
-div>img[add]{
+#add{
     position: absolute;
-}
-
-img[add]{
-    bottom: 55px;
-    right: 140px;
     height: 60px;
+    width: auto;
+}
+#add img{
+    height: 100%;
 }

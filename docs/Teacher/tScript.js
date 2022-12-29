@@ -148,9 +148,6 @@ const template = `<div class="background">
 </div>
 </div>`
 
-
-// ternarry operator will be used when dealing with multiple webpages of same parent page
-
 document.head.innerHTML = "<link rel='stylesheet' href='../tStyle.css'>\n<link rel='stylesheet' href='style.css'>"
 
 const folder = window.location.pathname.slice(window.location.pathname.lastIndexOf('/', window.location.pathname.length-2)+1, window.location.pathname.lastIndexOf('/'));
