@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Announcements</title>
 </head>
-<body>
 
-    <div class="container">
-        <div class="nav">
-            <div>Events</div>
-            <div>Upcoming</div>
-            <div>Important</div>
-            <div class="slider"></div>
+<body>
+    <div class='aligner'>
+        <div class="aContainer">
+            <div class="nav">
+                <div>Events</div>
+                <div>Upcoming</div>
+                <div>Important</div>
+                <div class="slider"></div>
+            </div>
+            <div class="announcements">
+                <marquee>
+                    <div class="announce"></div>
+                    <div class="announce"></div>
+                    <div class="announce"></div>
+                </marquee>
+                <div>
+                    <img add src="../icons/addCircle.svg" alt="add">
+                </div>
+            </div>
         </div>
-        <div class="announcements"></div>
     </div>
-    
-    <script src="./script.js" async defer></script>
+
+    <script src="./script.js" async defer></script> 
     <script src="../tScript.js" async defer></script>
 </body>
+
 </html>

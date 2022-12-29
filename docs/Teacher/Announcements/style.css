@@ -1,25 +1,83 @@
-.container{
+.aligner{
+    width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+
+.aContainer{
+    height: 100%;
+    width: 60em !important;
     background: rgba(255, 255, 255, .2);
     border-radius: 28px;
     flex-flow: column nowrap;
-    overflow: hidden;
     padding: 0;
 }
-.container .nav{
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: row nowrap;
+
+img[add]{
     height: fit-content;
+    width: fit-content;
+}
+
+/* Navigation Bar of Container */
+
+.aContainer .nav{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
+    border-bottom: 1px solid white;
 }
-.container .nav div{
-    padding: 10px 30px;
-    border: 1px solid red;
+
+/* Elements of NavBar */
+
+.aContainer .nav div{
+    padding: 20px 40px;
+    border-radius: 28px 28px 0 0;
 }
+
+/* Slider on NavBar */
+
 .nav div.slider{
     position: relative;
     transition: left .4s ease-in-out;
+    background: rgba(255, 255, 255, .4);
     padding: 0;
+}
+
+/* Announcements Container */
+
+.announcements{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Announcements */
+
+.announce{
+    width: calc(100% - 40px);
+    height: calc(100% - 80%);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .4);
+    margin-top: 20px;
+}
+
+div>img[add]{
+    position: absolute;
+}
+
+img[add]{
+    bottom: 55px;
+    right: 140px;
+    height: 60px;
 }
