@@ -21,10 +21,12 @@ const template = `<div class="background">
             </div>
         </a>
         <div class="menu-group">
-            <div><a href='../Dashboard'>Dashboard</a></div>
-            <div><a href='../Announcements'>Announcements</a></div>
-            <div><a href='../LessonPlan'>Lesson Plan</a></div>
-            <div><a href='../Students'>Students</a></div>
+        <a href='../Dashboard'><div>Dashboard</div></a>
+        <a href='../Announcements'><div>Announcements</div></a>
+        <a href='../LessonPlan'>
+            <div>Lesson Plan</div></a>
+            <a href='../Students'>
+            <div>Students</div></a>
         </div>
     </div>
 
@@ -150,7 +152,7 @@ const template = `<div class="background">
 
 document.head.innerHTML = "<link rel='stylesheet' href='../tStyle.css'>\n<link rel='stylesheet' href='style.css'>"
 
-const folder = window.location.pathname.slice(window.location.pathname.lastIndexOf('/', window.location.pathname.length-2)+1, window.location.pathname.lastIndexOf('/'));
+const folder = window.location.pathname.slice(window.location.pathname.lastIndexOf('/', window.location.pathname.lastIndexOf('/')-1), window.location.pathname.lastIndexOf('/'));
 
 const mainContent = document.body.children[0].outerHTML;
 
@@ -158,4 +160,4 @@ document.body.children[0].remove()
 document.body.innerHTML = template
 document.querySelector(".main").insertAdjacentHTML("beforeend", mainContent);
 document.querySelector(".main").lastChild.classList.add("mainChild");
-[...document.querySelector('.menu-group').children].forEach(child => child.children[0].href.includes(folder)?child.classList.add('activeDiv'):0)
+[...document.querySelector('.menu-group').children].forEach(child => child.href.includes(folder) ? child.classList.add('activeDiv') : 0)

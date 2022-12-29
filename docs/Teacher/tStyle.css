@@ -103,15 +103,15 @@ img[top-ellipse] {
     align-items: center;
     padding-left: 40px;
 }
-.menu-group div a{
+.menu-group a{
     text-decoration: none;
     color: black;
     font-size: 16px;
     font-weight: 500;
-    font-family: Inter;
+    font-family: 'Inter', 'Trebuchet MS', sans-serif;
 }
 
-.menu-group div:hover {
+.menu-group a:hover {
     background: rgba(166, 149, 255, .3);
     border-left: 3px solid #6159E6;
 }

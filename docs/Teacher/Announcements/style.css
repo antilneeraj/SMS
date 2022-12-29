@@ -17,11 +17,6 @@
     padding: 0;
 }
 
-img[add]{
-    height: fit-content;
-    width: fit-content;
-}
-
 /* Navigation Bar of Container */
 
 .aContainer .nav{
@@ -49,7 +44,7 @@ img[add]{
 
 .nav div.slider{
     position: absolute;
-    transition: margin-left .4s ease-in-out, width .4s;
+    transition: margin-left .4s ease-out, width .4s;
     background: rgba(255, 255, 255, .4);
     padding: 0;
 }
@@ -60,25 +55,43 @@ img[add]{
     width: 100%;
     height: 100%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
 
-/* Announcements */
+.announcements > *{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    transition: margin-left .4s ease-out;
+}
 
 .announce{
     width: calc(100% - 40px);
-    height: calc(100% - 80%);
+    height: 20%;
     border-radius: 28px;
     background: rgba(255, 255, 255, .4);
     margin-top: 20px;
 }
+
 #add{
     position: absolute;
     height: 60px;
     width: auto;
+    scale: auto;
+    transition: scale .3s;
 }
+
+#add:hover{
+    scale: 1.2;
+}
+
 #add img{
     height: 100%;
+    cursor: pointer;
 }
