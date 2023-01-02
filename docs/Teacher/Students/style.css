@@ -1,24 +1,43 @@
-.sContainer{
+.sContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
     border-radius: 28px;
+    background: rgba(255, 255, 255, .2);
 }
 
-table{
-    width: inherit;
+.cSel {
+    
+}
+
+.sID {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
     height: fit-content;
+    background: rgba(255, 255, 255, .4);
     border-radius: 28px;
-    text-align: center;
+    cursor: pointer;
+    scale: 1;
+    transition: scale .3s;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.sID:hover {
+    scale: 1.05;
+}
+
+.uImg {
+    border-radius: 50%;
+    margin-bottom: 5px;
     overflow: hidden;
 }
-th, td{
-    padding: 10px;
-}
-tr > *{
-    border: 1px solid #0000;
-    background: rgba(255,255,255,.2);
-    box-sizing: border-box;
-}
 
-#add{
+#add {
     position: absolute;
     height: 60px;
     width: auto;
@@ -26,11 +45,11 @@ tr > *{
     transition: scale .3s;
 }
 
-#add:hover{
-    scale: 1.2;
+#add:hover {
+    scale: 1.1;
 }
 
-#add img{
+#add img {
     height: 100%;
     cursor: pointer;
 }

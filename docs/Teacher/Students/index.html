@@ -5,27 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students</title>
+
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+
+
+    <!-- Add Student Button -->
+
     <div class="sContainer">
         <div id="add">
             <img src="../icons/addCircle.svg" alt="add">
         </div>
-        <table>
-            <tr>
-                <th>S. No.</th>
-                <th>Roll No.</th>
-                <th>Name</th>
-                <!-- <th>D.O.B</th> -->
-                <th>EMAIL - ID</th>
-                <th>Contact No.</th>
-                <!-- <th>Fathers' Name</th> -->
-                <!-- <th>Mothers' Name</th> -->
-                <!-- <th>Contact No.</th> -->
-                <!-- <th>Address</th> -->
-            </tr>
-        </table>
+
+        <!-- Selection Menu -->
+
+        <div class="select">
+            <select name="class" id="cSel">
+                <option value="Select Class">Select Class</option>
+                <option value="First Semester">First Semester</option>
+                <option value="Second Semester">Second Semester</option>
+                <option value="Third Semester">Third Semester</option>
+                <option value="Fourth Semester">Fourth Semester</option>
+                <option value="Fifth Semester">Fifth Semester</option>
+                <option value="Sixth Semester">Sixth Semester</option>
+            </select>
+        </div>
+
+        <!-- Student ID -->
+
+        <div class="sID">
+            <div class="uImg">
+                <img src="testImg/1.png" height ="70px" alt="sIco">
+            </div>
+            <div class="uName">
+                <h3>Neeraj</h3>
+            </div>
+        </div>
     </div>
+
     <script src="script.js" async defer></script>
     <script src="../tScript.js" async defer></script>
 </body>
