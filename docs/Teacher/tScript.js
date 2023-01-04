@@ -21,12 +21,21 @@ const template = `<div class="background">
             </div>
         </a>
         <div class="menu-group">
-        <a href='../Dashboard'><div>Dashboard</div></a>
-        <a href='../Announcements'><div>Announcements</div></a>
-        <a href='../LessonPlan'>
-            <div>Lesson Plan</div></a>
+            <a href='../Dashboard'>
+                <div>Dashboard</div>
+            </a>
+            <a href='../Announcements'>
+                <div>Announcements</div>
+            </a>
+            <a href='../LessonPlan'>
+                <div>Lesson Plan</div>
+            </a>
             <a href='../Students'>
-            <div>Students</div></a>
+                <div>Students</div>
+            </a>
+            <a href = '../Marks'>
+                <div>Marks</div>
+            </a>
         </div>
     </div>
 
