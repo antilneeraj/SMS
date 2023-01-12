@@ -46,6 +46,7 @@ img[top-ellipse] {
     display: flex;
     flex-flow: row;
     background: rgba(255, 255, 255, .2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
     position: absolute;
     left: 50%;
     top: 50%;

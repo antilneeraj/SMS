@@ -4,79 +4,7 @@
     flex-flow: column;
     border-radius: 28px;
     background: rgba(255, 255, 255, .2);
-}
-
-.select {
-    border-radius: 10px;
-    background: rgba(255, 255, 255, .3);
-    overflow: hidden;
-    padding: 15px 15px 0px 15px;
-}
-
-.select > div:first-child{
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.dropDown{
-    display: none;
-    background: rgba(255, 255, 255, .3);
-    padding: 0px 10px 10px 10px;
-    position: absolute;
-    transform: translate(-15px, 0);
-    border-radius: 0 0 10px 10px;
-}
-
-.dropDown div{
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.dropDown div:hover{
-    background: rgba(255, 255, 255, .2);
-}
-
-.students{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.students{
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row wrap;
-    font-family: 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-    scale: 1;
-    transition: scale .3s;
-}
-
-.students:hover {
-    scale: 1.05;
-}
-
-.student{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items:center;
-    padding: 15px 20px;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, .4);
-    letter-spacing: .5px;
-}
-
-.student img {
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.sDetails p{
-    color: rgb(55, 55, 55);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 }
 
 #add {
@@ -94,4 +22,85 @@
 #add img {
     height: 100%;
     cursor: pointer;
+}
+
+/* Selection Menu */
+
+.select {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .3);
+    overflow: hidden;
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 10px 30px 10px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    /* arrow style */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../icons/downArrow.png");
+    background-repeat: no-repeat;
+    background-size: 12.5% auto;
+    background-position: 92% center;
+    cursor: pointer;
+}
+
+.select option{
+    height: inherit;
+    width: inherit;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* --------------------------------------------------- */
+.students {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.students {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row wrap;
+    font-family: 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    scale: 1;
+    transition: scale .3s;
+}
+
+.students:hover {
+    scale: 1.05;
+}
+
+.student {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    letter-spacing: .5px;
+}
+
+.student img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sDetails p {
+    color: rgb(55, 55, 55);
 }
