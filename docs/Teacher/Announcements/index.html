@@ -11,8 +11,9 @@
 
 <body>
     <div class='aligner'>
+        <div class="background"></div>
         <div class="aContainer">
-            <div id="add">
+            <div id="add" onclick="[document.querySelector('.create'), document.querySelector('.background')].forEach(elem => elem.style.display = 'block');">
                 <img src="../icons/addCircle.svg" alt="add">
             </div>
             <div class="nav">
@@ -22,27 +23,57 @@
                 <div>Important</div>
             </div>
             <div class="announcements">
-                    <div class="event">
-                        <div class="announce"></div>
-                        <div class="announce"></div>
-                        <div class="announce"></div>
+                <div class="event">
+                    <div class="announce"></div>
+                    <div class="announce"></div>
+                    <div class="announce"></div>
+                </div>
+                <div class="upcoming">
+                    <div class="announce"></div>
+                    <div class="announce"></div>
+                    <div class="announce"></div>
+                </div>
+                <div class="important">
+                    <div class="announce"></div>
+                    <div class="announce"></div>
+                    <div class="announce"></div>
+                </div>
+            </div>
+            <div class="create">
+                <div class="close" onclick="[document.querySelector('.create'), document.querySelector('.background')].forEach(elem => elem.style.display = 'none');">
+                    <img src="../icons/delete.png" alt="close">
+                </div>
+                <div class="top-heading">
+                    <p>Create Announcement</p>
+                </div>
+                <div class="form">
+                    <input type="text" name="title" id="title" placeholder="Title">
+
+                    <textarea placeholder="Message" name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input placeholder="Tags" type="text" name="tags" id="tags">
+
+                    <div lastdiv>
+                        <div>
+                            <input type="checkbox" id="imp"><label for="imp">Important</label>
+                        </div>
+
+                        <div>
+                            <div class="formTitle">Date: </div>
+                            <input type="date" name="date" id="date">
+                        </div>
+
+                        <div>
+                            <div class="formTitle">Time: </div>
+                            <input type="time" name="time" id="time">
+                        </div>
                     </div>
-                    <div class="upcoming">
-                        <div class="announce"></div>
-                        <div class="announce"></div>
-                        <div class="announce"></div>
-                    </div>
-                    <div class="important">
-                        <div class="announce"></div>
-                        <div class="announce"></div>
-                        <div class="announce"></div>
-                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="./script.js" async defer></script> 
-    <script src="../tScript.js" async defer></script>
+        <script src="./script.js" async defer></script>
+        <script src="../tScript.js" async defer></script>
 </body>
 
 </html>

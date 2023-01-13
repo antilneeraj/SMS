@@ -1,9 +1,5 @@
-const template = `<div class="background">
-<img src="../icons/back-ellipse1.svg" alt="">
-<img src="../icons/back-ellipse2.svg" alt="">
-</div>
+const template = `
 <div class="white">
-<img top-ellipse src="../icons/top-ellipse.svg" alt="">
 
 <!-- left Side Navigation  -->
 
@@ -14,12 +10,6 @@ const template = `<div class="background">
             <span style="color: rgba(64, 50, 187, 0.849);  font-size: 30px;">.com
             </span>
         </div>
-        <a href="javascript:void(0)" id="btn-student"
-            onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
-            <div class="add-btn">
-                Add student
-            </div>
-        </a>
         <div class="menu-group">
             <a href='../Dashboard'>
                 <div>Dashboard</div>
@@ -35,6 +25,12 @@ const template = `<div class="background">
             </a>
             <a href = '../Marks'>
                 <div>Marks</div>
+            </a>
+            <a href = '../Attendance'>
+                <div>Attendance</div>
+            </a>
+            <a href = '../Resources'>
+                <div>Resources</div>
             </a>
         </div>
     </div>

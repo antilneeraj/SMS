@@ -4,28 +4,8 @@
 }
 
 body {
-  backdrop-filter: blur(60px);
-    background: linear-gradient(to bottom, #E891C8, #7B3CAF);
-}
-
-/* Background Bubbles */
-
-.background {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.background img:first-child {
-  height: 200px;
-}
-
-.background img:last-child {
-  align-self: flex-end;
-  height: 300px;
+  background: url('../Images/background.svg') no-repeat;
+  background-size: cover;
 }
 
 /* Main */
@@ -40,12 +20,14 @@ body {
   flex-flow: row wrap;
   z-index: 1;
 }
-.content>div{
+
+.content>div {
   background: #0000;
   margin-left: 50px;
   /* transform: translate(-50%, 0); */
 }
-.content>div>div{
+
+.content>div>div {
   /* position: relative; */
   backdrop-filter: blur(25px);
   width: 365px;
@@ -58,7 +40,9 @@ body {
   transition: all .3s;
   overflow: hidden;
 }
-.content>div>div>div:nth-child(2), .content>div>div>div:nth-child(3){
+
+.content>div>div>div:nth-child(2),
+.content>div>div>div:nth-child(3) {
   transition: all .3s;
 }
 
@@ -81,7 +65,7 @@ body {
 
 /* Back Button */
 
-.backBtn{
+.backBtn {
   height: 60px;
   width: 60px;
   position: fixed;
@@ -96,7 +80,8 @@ body {
   background-repeat: no-repeat;
   transition: transform .3s;
 }
-.backBtn:hover{
+
+.backBtn:hover {
   transform: scale(1.1);
 }
 
@@ -120,7 +105,7 @@ body {
 
 
 /* Ellipse 15 */
-.teacherImg{
+.teacherImg {
   width: 307.1px;
   height: 307.1px;
   scale: 0.6;
@@ -163,7 +148,7 @@ body {
 
 
 /* Ellipse 15 */
-.studentImg{
+.studentImg {
   width: 307.1px;
   height: 307.1px;
   scale: 0.6;
@@ -189,7 +174,7 @@ body {
 }
 
 /* Light effect on mouse hover */
-.light{
+.light {
   height: 0;
   width: 0;
   display: none;
@@ -201,28 +186,32 @@ body {
 }
 
 /* form */
-.input.date::-webkit-calendar-picker-indicator{
+.input.date::-webkit-calendar-picker-indicator {
   padding: 8px;
   background: url('Images/calender.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  opacity:1;
+  opacity: 1;
 }
+
 .input.roll::-webkit-inner-spin-button,
-.input.roll::-webkit-outer-spin-button{
+.input.roll::-webkit-outer-spin-button {
   display: none;
 }
-.input.roll::placeholder{
+
+.input.roll::placeholder {
   color: darkgrey;
 }
-.form{
+
+.form {
   position: relative;
   top: -100px;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
 }
-.input{
+
+.input {
   background: #224957;
   height: 25px;
   width: 300px;
@@ -234,33 +223,37 @@ body {
   outline: none;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.button{
+
+.button {
   margin-top: 40px;
   border-radius: 30px;
   border: none;
   width: 340px;
   height: 55px;
 }
-.btn{
+
+.btn {
   color: white;
-  border:none;
+  border: none;
   border-radius: inherit;
   height: inherit;
-  display:flex;
+  display: flex;
   cursor: pointer;
   font-weight: 700;
-  justify-content:center;
+  justify-content: center;
   align-items: flex-end;
   flex-flow: column wrap;
   font-size: 16px;
-  background: none; 
-  background-color:#0f6400; 
+  background: none;
+  background-color: #0f6400;
 }
-.text{
-  position:absolute;
+
+.text {
+  position: absolute;
   align-self: center;
 }
-.arrow{
+
+.arrow {
   box-sizing: border-box;
   height: inherit;
   width: 100%;
@@ -275,10 +268,12 @@ body {
   font-size: 20px;
   transition: width .4s, padding .4s, margin-left .4s;
 }
-.arrow2{
+
+.arrow2 {
   padding-left: 140px;
 }
-.btn:hover .arrow{
+
+.btn:hover .arrow {
   width: 55px;
   padding: 0;
   padding-bottom: 5px;
@@ -287,8 +282,8 @@ body {
 /* Media queries */
 
 
-@media screen and (max-width: 880px){
-  .content>div{
+@media screen and (max-width: 880px) {
+  .content>div {
     margin: 0;
   }
 }

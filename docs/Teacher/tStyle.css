@@ -5,36 +5,9 @@
 
 body {
     font-family: 'Trebuchet MS', sans-serif;
-    background: linear-gradient(to bottom, #E891C8, #7B3CAF);
+    background: url('../Images/background.svg') no-repeat;
+    background-size: cover;
     height: 100vh;
-    overflow: hidden;
-}
-
-/* Background Bubbles */
-
-.background {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.background img:first-child {
-    height: 200px;
-}
-
-.background img:last-child {
-    align-self: flex-end;
-    height: 300px;
-}
-
-img[top-ellipse] {
-    position: absolute;
-    height: 150px;
-    right: -30px;
-    top: -35px;
-    z-index: 1;
 }
 
 /* Saab ka parent */
@@ -42,6 +15,7 @@ img[top-ellipse] {
 .white {
     height: calc(100vh - 70px);
     width: calc(100vw - 70px);
+
     border-radius: 28px;
     display: flex;
     flex-flow: row;
@@ -51,7 +25,7 @@ img[top-ellipse] {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(2px);
 }
 
 .left-nav {
@@ -255,13 +229,14 @@ img[alt='logo'] {
     height: 650px;
     padding: 16px;
     border-radius: 20px;
-    border: 2px solid rgb(64, 50, 187);
-    background-color: white;
+    background-color: rgba(255, 255, 255, .4);
     z-index: 1002;
     overflow: auto;
     font-family: 'Trebuchet MS';
 }
-
+/* .white_content h3, .top-heading{
+    font-family: 'Montserrat';
+} */
 .close-logo {
     position: absolute;
     right: 15px;

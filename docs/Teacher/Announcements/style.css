@@ -1,4 +1,4 @@
-.aligner{
+.aligner {
     width: 100%;
     height: 100%;
     display: flex;
@@ -8,7 +8,7 @@
 
 /* Main Container */
 
-.aContainer{
+.aContainer {
     height: 100%;
     width: 60em !important;
     background: rgba(255, 255, 255, .2);
@@ -19,7 +19,7 @@
 
 /* Navigation Bar of Container */
 
-.aContainer .nav{
+.aContainer .nav {
     height: fit-content;
     width: 100%;
     display: flex;
@@ -32,7 +32,7 @@
 
 /* Elements of NavBar */
 
-.aContainer .nav div{
+.aContainer .nav div {
     position: relative;
     z-index: 5;
     padding: 20px 40px;
@@ -42,7 +42,7 @@
 
 /* Slider on NavBar */
 
-.nav div.slider{
+.nav div.slider {
     position: absolute;
     transition: margin-left .4s ease-out, width .4s;
     background: rgba(255, 255, 255, .4);
@@ -51,7 +51,7 @@
 
 /* Announcements Container */
 
-.announcements{
+.announcements {
     width: 100%;
     height: 100%;
     display: flex;
@@ -61,7 +61,7 @@
     overflow: hidden;
 }
 
-.announcements > *{
+.announcements>* {
     height: inherit;
     width: inherit;
     display: flex;
@@ -71,7 +71,7 @@
     transition: margin-left .4s ease-out;
 }
 
-.announce{
+.announce {
     width: calc(100% - 40px);
     height: 20%;
     border-radius: 28px;
@@ -79,7 +79,7 @@
     margin-top: 20px;
 }
 
-#add{
+#add {
     position: absolute;
     height: 60px;
     width: auto;
@@ -87,11 +87,86 @@
     transition: scale .3s;
 }
 
-#add:hover{
+#add:hover {
     scale: 1.2;
 }
 
-#add img{
+#add img {
     height: 100%;
     cursor: pointer;
+}
+
+/* Add Announcement Section */
+
+.create {
+    position: absolute;
+    padding: 20px;
+    height: 85vh;
+    width: 70vw;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 28px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+.create input, .create textarea{
+    width: 100%;
+    resize: none;
+    min-height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12.5px;
+    box-sizing: border-box;
+    margin: 15px 0;
+}
+
+.close {
+    float: right;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.top-heading {
+    width: inherit;
+    margin: 5px 0;
+    border-bottom: 1px solid gray;
+}
+
+.top-heading p {
+    padding: 0 0 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.create div[lastdiv]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.create div[lastdiv] input{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+.create div[lastdiv] > div{
+    display: flex;
+    align-items: center;
+}
+.close img {
+    height: 100%;
+}
+
+.background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    top: 0%;
+    left: 0%;
+
 }

@@ -14,7 +14,12 @@ window.addEventListener('load', e => {
         announcements[1].style.marginLeft = -announcements[0].parentElement.getBoundingClientRect().width*(ind-1>0?ind-1:0)+'px';
     }))
 
-    children[0].click()
+    children[0].click();
+
+    // bete ko baap ke barabar lane ke liye
+
+    const bete = [document.querySelector('.background'), document.querySelector('.create')];
+    bete.forEach(beta => document.body.append(beta));
 // Aligning Add Button
 
     const add = document.querySelector('#add');
