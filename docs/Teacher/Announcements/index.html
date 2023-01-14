@@ -13,7 +13,8 @@
     <div class='aligner'>
         <div class="background"></div>
         <div class="aContainer">
-            <div id="add" onclick="[document.querySelector('.create'), document.querySelector('.background')].forEach(elem => elem.style.display = 'block');">
+            <div id="add"
+                onclick="[document.querySelector('.create'), document.querySelector('.background')].forEach(elem => elem.style.display = 'block');">
                 <img src="../icons/addCircle.svg" alt="add">
             </div>
             <div class="nav">
@@ -39,8 +40,11 @@
                     <div class="announce"></div>
                 </div>
             </div>
+            <!-- Add Announcement Section -->
+
             <div class="create">
-                <div class="close" onclick="[document.querySelector('.create'), document.querySelector('.background')].forEach(elem => elem.style.display = 'none');">
+                <div class="close"
+                    onclick="[document.querySelector('.create'), document.querySelector('.background')].forEach(elem => elem.style.display = 'none');">
                     <img src="../icons/delete.png" alt="close">
                 </div>
                 <div class="top-heading">
@@ -59,12 +63,12 @@
                         </div>
 
                         <div>
-                            <div class="formTitle">Date: </div>
+                            <div class="aDate">Date: </div>
                             <input type="date" name="date" id="date">
                         </div>
 
                         <div>
-                            <div class="formTitle">Time: </div>
+                            <div class="aTime">Time: </div>
                             <input type="time" name="time" id="time">
                         </div>
                     </div>
