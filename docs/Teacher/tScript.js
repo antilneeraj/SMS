@@ -6,8 +6,8 @@ const template = `
 <div class="left-nav">
     <div firstdiv>
         <div class="site-logo">
-            <span style=" font-size: 30px;">SMS</span>
-            <span style="color: rgba(64, 50, 187, 0.849);  font-size: 30px;">.com
+            <span style=" font-size: 20px;">SMS</span>
+            <span style="color: #5649F2;  font-size: 20px;">.com
             </span>
         </div>
         <div class="menu-group">
@@ -70,89 +70,89 @@ const template = `
 <!-- -------------------ADD Student Section---------------- -->
 
 <div id="fade" class="blur-background">
-<div id="light" class="white_content">
-    <form action="">
+    <div id="light" class="white_content">
+        <form action="">
 
-        <a cross href="javascript:void(0)"
-            onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
-            <img src="../icons/delete.png" alt="close-logo" height="15px" width="15px" class="close-logo">
-        </a>
+            <a cross href="javascript:void(0)"
+                onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+                <img src="../icons/delete.png" alt="close-logo" height="15px" width="15px" class="close-logo">
+            </a>
 
-        <div class="top-heading">
-            <p>STUDENT DETAILS</p>
-        </div>
-        <div class="container">
-            <div class="genedu cont">
-                <div class="general">
-                    <h3>General Information</h3>
-                    <div class="elements">
-                        <label for="text" required>First Name</label>
-                        <input type="text">
+            <div class="top-heading">
+                <p>STUDENT DETAILS</p>
+            </div>
+            <div class="container">
+                <div class="genedu cont">
+                    <div class="general">
+                        <h3>General Information</h3>
+                        <div class="elements">
+                            <label for="text" required>First Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="elements">
+                            <label for="text">Last Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="elements">
+                            <label for="text" required>Roll No.</label>
+                            <input type="number">
+                        </div>
                     </div>
-                    <div class="elements">
-                        <label for="text">Last Name</label>
-                        <input type="text">
-                    </div>
-                    <div class="elements">
-                        <label for="text" required>Roll No.</label>
-                        <input type="number">
+                    <div class="education">
+                        <h3>Education Information</h3>
+                        <div class="elements">
+                            <label for="text" required>Semester</label>
+                            <input type="text">
+                        </div>
+                        <div class="elements">
+                            <label for="text">Group</label>
+                            <input type="text">
+                        </div>
+                        <div class="elements">
+                            <label for="text" required>Addmission<BR>Entry Type</label>
+                            <input type="text">
+                        </div>
                     </div>
                 </div>
-                <div class="education">
-                    <h3>Education Information</h3>
-                    <div class="elements">
-                        <label for="text" required>Semester</label>
-                        <input type="text">
+                <div class="locon cont">
+                    <div class="location">
+                        <h3>Location Information</h3>
+                        <div class="elements">
+                            <label for="text" required>State</label>
+                            <input type="text">
+                        </div>
+                        <div class="elements">
+                            <label for="text">District</label>
+                            <input type="text">
+                        </div>
+                        <div class="elements">
+                            <label for="text" required>Village / H No</label>
+                            <input type="text">
+                        </div>
                     </div>
-                    <div class="elements">
-                        <label for="text">Group</label>
-                        <input type="text">
-                    </div>
-                    <div class="elements">
-                        <label for="text" required>Addmission<BR>Entry Type</label>
-                        <input type="text">
+                    <div class="contact">
+                        <h3>Contact Information</h3>
+                        <div class="elements">
+                            <label for="text" required>Email ID</label>
+                            <input type="email">
+                        </div>
+                        <div class="elements">
+                            <label for="text">Student<BR>Phone No</label>
+                            <input type="Number">
+                        </div>
+                        <div class="elements">
+                            <label for="text" required>Parents<BR>Phone No</label>
+                            <input type="Number">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="locon cont">
-                <div class="location">
-                    <h3>Location Information</h3>
-                    <div class="elements">
-                        <label for="text" required>State</label>
-                        <input type="text">
-                    </div>
-                    <div class="elements">
-                        <label for="text">District</label>
-                        <input type="text">
-                    </div>
-                    <div class="elements">
-                        <label for="text" required>Village / H No</label>
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="contact">
-                    <h3>Contact Information</h3>
-                    <div class="elements">
-                        <label for="text" required>Email ID</label>
-                        <input type="email">
-                    </div>
-                    <div class="elements">
-                        <label for="text">Student<BR>Phone No</label>
-                        <input type="Number">
-                    </div>
-                    <div class="elements">
-                        <label for="text" required>Parents<BR>Phone No</label>
-                        <input type="Number">
-                    </div>
-                </div>
+            <div class="btnContainer">
+                <input type="submit" value="Add Student">
+                <input type="button" value="Cancel">
             </div>
-        </div>
-        <div class="btnContainer">
-            <input type="submit" value="Add Student">
-            <input type="button" value="Cancel">
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </div>`
 
 document.head.innerHTML = "<link rel='stylesheet' href='../tStyle.css'>\n<link rel='stylesheet' href='style.css'>"

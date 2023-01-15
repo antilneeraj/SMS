@@ -8,6 +8,7 @@ body {
     background: url('../Images/background.svg') no-repeat;
     background-size: cover;
     height: 100vh;
+    color: white;
 }
 
 /* Saab ka parent */
@@ -15,11 +16,10 @@ body {
 .white {
     height: calc(100vh - 70px);
     width: calc(100vw - 70px);
-
     border-radius: 28px;
     display: flex;
     flex-flow: row;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(157, 157, 157, .1);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
     position: absolute;
     left: 50%;
@@ -29,7 +29,7 @@ body {
 }
 
 .left-nav {
-    background: rgba(255, 255, 255, .2);
+    background: rgba(0, 0, 0,.2);
     box-sizing: border-box;
     padding: 60px 0;
     border-radius: 28px 0 0 28px;
@@ -40,7 +40,7 @@ body {
 }
 
 .left-nav>* {
-    margin: 0 35px;
+    margin: 0 20px;
 }
 
 [firstdiv] {
@@ -58,7 +58,6 @@ body {
 .site-logo {
     font-weight: 700;
     font-family: Inter;
-    font-size: 16px;
 }
 
 /* left nav elements */
@@ -73,15 +72,15 @@ body {
     border-left: 3px solid #6159E6;
 }
 .menu-group div {
-    height: 50px;
+    height: 40px;
     display: flex;
     align-items: center;
-    padding-left: 40px;
+    padding-left: 30px;
 }
 .menu-group a{
     text-decoration: none;
-    color: black;
-    font-size: 16px;
+    color: white;
+    font-size: 15px;
     font-weight: 500;
     font-family: 'Inter', 'Trebuchet MS', sans-serif;
 }
@@ -97,32 +96,6 @@ img[alt='logo'] {
     border-radius: 50%;
 }
 
-/* Add Student Button */
-
-.add-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: white;
-    width: 200px;
-    height: 45px;
-    margin-top: 40px;
-    border-radius: 15px;
-    background-color: #7D3DAF;
-    transition: box-shadow .4s, background-color .4s, color .1s;
-}
-
-.add-btn:hover {
-    color: rgb(64, 50, 187);
-    box-shadow: 1px 1px 10px gray;
-    background-color: white;
-}
-
-#btn-student {
-    text-decoration: none;
-}
-
 /* Logout Button */
 
 .logout-btn {
@@ -131,11 +104,12 @@ img[alt='logo'] {
     justify-content: center;
     cursor: pointer;
     color: white;
-    height: 45px;
-    width: 200px;
+    height: 40px;
+    width: 170px;
     margin-top: 30px;
     border-radius: 15px;
-    background-color: #7D3DAF;
+    background-color: #7833D7;
+    /* 3D3C3C */
     transition: box-shadow .4s, background-color .4s, color .1s;
 }
 
@@ -177,14 +151,15 @@ img[alt='logo'] {
 .search-group input[type='text'] {
     padding: 15px 15px 15px 50px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, .4);
+    background: rgba(157,157,157, .2);
+    color: white;
     border: none;
     outline: none;
     margin-right: 20px;
 }
 
 .search-group input[type='text']::placeholder{
-    color: black;
+    color: white;
 }
 
 .icon-search {
@@ -198,7 +173,7 @@ img[alt='logo'] {
     width: fit-content;
     padding: 11.5px;
     border: none;
-    background: rgba(255, 255, 255, .4);
+    background: rgba(157,157,157, .2);
     border-radius: 10px;
     cursor: pointer;
 }
@@ -212,7 +187,7 @@ img[alt='logo'] {
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.158);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,14 +204,12 @@ img[alt='logo'] {
     height: 650px;
     padding: 16px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, .7);
     z-index: 1002;
     overflow: auto;
     font-family: 'Trebuchet MS';
 }
-/* .white_content h3, .top-heading{
-    font-family: 'Montserrat';
-} */
+
 .close-logo {
     position: absolute;
     right: 15px;
@@ -263,6 +236,7 @@ img[alt='logo'] {
     align-items: center;
     justify-content: space-between;
     margin: 10px 0;
+    color: black;
 }
 
 .elements>input {
@@ -281,7 +255,7 @@ img[alt='logo'] {
     box-shadow: 0 0 2px 0 rgba(64, 50, 187, .5);
 }
 
-/* Removing Spin Buttons from input typer numbers input box */
+/* Removing Spin Buttons from input type numbers input box */
 
 .elements input::-webkit-inner-spin-button,
 .elements input::-webkit-outer-spin-button {
@@ -292,6 +266,7 @@ img[alt='logo'] {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
+    color:black;
 }
 
 .container>div {

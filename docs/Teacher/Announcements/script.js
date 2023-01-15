@@ -26,5 +26,26 @@ window.addEventListener('load', e => {
     add.style.marginTop = add.parentElement.getBoundingClientRect().height - add.getBoundingClientRect().height - 10 + 'px'
 
     add.style.marginLeft = add.parentElement.getBoundingClientRect().width - add.getBoundingClientRect().width - 10 + 'px';
+
+    // Announcement Form Aligner
+
+    const form = document.querySelector('form[announcement]');
+
+    form.addEventListener('submit', e => {
+        const headers  = {
+
+        }
+        const inputs = ['title', 'message', 'tags', 'imp', 'date', 'time'].map(id => document.querySelector(`#${id}`));
+        fetch('teri api ka url', {
+            method: 'POST', 
+            body:inputs.map(input => Object()[input.name] = input.value),
+            headers: headers
+        }).then(success => success.json())
+        .then(json => {
+            if(!json.parse().success){
+                // unsuccessful
+            }
+        })
+    });
 })
 

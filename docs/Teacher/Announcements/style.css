@@ -11,7 +11,7 @@
 .aContainer {
     height: 100%;
     width: 60em !important;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(157, 157, 157, .2);
     border-radius: 28px;
     flex-flow: column nowrap;
     padding: 0;
@@ -45,7 +45,7 @@
 .nav div.slider {
     position: absolute;
     transition: margin-left .4s ease-out, width .4s;
-    background: rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .2);
     padding: 0;
 }
 
@@ -98,7 +98,8 @@
 
 /* Add Announcement Section */
 
-.create, .background{
+.create,
+.background {
     display: none;
 }
 
@@ -107,14 +108,24 @@
     padding: 20px;
     height: 85vh;
     width: 70vw;
-    background: rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .7);
     border-radius: 28px;
     top: 50%;
     left: 50%;
+    flex-flow: column nowrap;
     transform: translate(-50%, -50%);
     z-index: 5;
 }
-.create input, .create textarea{
+
+.form{
+    display: flex;
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.create input,
+.create textarea {
     width: 100%;
     resize: none;
     min-height: 40px;
@@ -123,8 +134,12 @@
     border-radius: 5px;
     font-size: 15px;
     padding: 12.5px;
+    margin-top: 15px;
     box-sizing: border-box;
-    margin: 15px 0;
+}
+
+.create #message{
+    margin-top: 19px;
 }
 
 .close {
@@ -146,25 +161,31 @@
     font-weight: bold;
     color: black;
 }
-.create div[lastdiv]{
+
+.create div[lastdiv] {
+    margin-top: 17px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    color: black;
 }
-.create div[lastdiv] input{
+
+.create div[lastdiv] input {
     width: auto;
     height: auto;
     margin: 0;
 }
-.create div[lastdiv] > div{
+
+.create div[lastdiv]>div {
     display: flex;
     align-items: center;
 }
+
 .close img {
     height: 100%;
 }
 
-.background{
+.background {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -173,10 +194,52 @@
     top: 0%;
     left: 0%;
 }
-.create div[lastdiv] > div > input[type='date']::-webkit-calendar-picker-indicator {
+
+.create div[lastdiv]>div>input[type='date']::-webkit-calendar-picker-indicator {
     padding: 5px;
     background: url('../../Login/Images/calender.svg');
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 1;
-  }
+}
+
+/* Submit and Cancel Buttons */
+.btnContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    bottom: 0;
+}
+
+.btnContainer input {
+    padding: 12.5px 30px;
+    width: 155px;
+    border-radius: 10px;
+    outline: none;
+    margin: 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(64, 50, 187, .8);
+    transition: background-color .4s, color .4s, box-shadow .4s;
+}
+
+.btnContainer input:hover {
+    color: rgb(64, 50, 187);
+    box-shadow: 1px 1px 10px gray;
+    background-color: white;
+}
+
+.btnContainer input:last-child {
+    background-color: gray;
+    transition: background-color .4s, box-shadow .4s;
+}
+
+.btnContainer input:last-child:hover {
+    color: rgb(64, 50, 187);
+    box-shadow: 1px 1px 10px gray;
+    background-color: white;
+}

@@ -13,7 +13,7 @@ th, td{
 }
 tr > *{
     border: 1px solid #0000;
-    background: rgba(255,255,255,.2);
+    background: rgba(157,157,157,.2);
     box-sizing: border-box;
 }
 tr > td:last-child div{
@@ -23,4 +23,5 @@ tr > td:last-child div{
     box-sizing: border-box;
     background: #fff;
     border-radius: 5px;
+    color: #000;
 }

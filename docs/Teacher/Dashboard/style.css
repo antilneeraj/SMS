@@ -14,7 +14,7 @@
 }
 
 [something]{
-    background: rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .2);
     border-radius: 28px;
 }
 
@@ -35,7 +35,7 @@
 .pContainer{
     height: calc(100% - 50px);
     width: calc(100% - 50px);
-    background: #CE86E3;
+    background: #7833D7;
     border-radius: 28px;
 }
 
@@ -43,6 +43,6 @@
     box-sizing: border-box;
     height: 275px;
     width: 31.03678929765886%;
-    background:rgba(255, 255, 255, .4);
+    background:rgba(255, 255, 255, .2);
     border-radius: 28px;
 }

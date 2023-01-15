@@ -3,7 +3,7 @@
     align-items: flex-start;
     flex-flow: column;
     border-radius: 28px;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(157, 157, 157, .2);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
 }
 
@@ -28,7 +28,8 @@
 
 .select {
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(255, 255, 255, .6);
+    color: black;
     overflow: hidden;
     border: none;
     outline: none;
@@ -52,7 +53,7 @@
     height: inherit;
     width: inherit;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(157,157,157, 0.3);
     font-weight: 500;
     border: none;
     outline: none;
@@ -102,5 +103,5 @@
 }
 
 .sDetails p {
-    color: rgb(55, 55, 55);
+    color: #fff;
 }
