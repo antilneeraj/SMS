@@ -42,15 +42,15 @@ function input(name, type, placeholder, required, ...classList){
       const form = document.createElement('form');
       form.classList.add('form');
 
-      form.action = '../Teacher/Dashboard/';
-
       let input1, input2;
       if(elem===student){
         input1 = input('number', 'roll', 'Roll Number', true, 'input', 'roll');
         input2 = input('date', 'date', '', true, 'input', 'date');
+        form.action = '../Student/';
       }else{
         input1 = input('text', 'uid', 'User ID', true, 'input');
         input2 = input('password', 'password', 'Password', true, 'input');
+        form.action = '../Teacher/Dashboard/';
       }
 
       form.append(input1, input2);
