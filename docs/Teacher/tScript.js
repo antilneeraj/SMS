@@ -41,7 +41,7 @@ const template = `
                 <img src="../icons/teacher.svg" alt="logo">
                 <p style="margin-left: 10px;">Sunita Lather</p>
             </div>
-
+            
             <div class="logout-btn">
                 Logout
             </div>
@@ -166,3 +166,8 @@ document.body.innerHTML = template
 document.querySelector(".main").insertAdjacentHTML("beforeend", mainContent);
 document.querySelector(".main").lastChild.classList.add("mainChild");
 [...document.querySelector('.menu-group').children].forEach(child => child.href.includes(folder) ? child.classList.add('activeDiv') : 0)
+
+const logoutBtn = document.querySelector(".logout-btn");
+logoutBtn.addEventListener("click", () => {
+    window.location.href = "../index.html";
+})
