@@ -10,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: fantasy;
+    font-family: Anton, fantasy,sans-serif;
 }
 
 .container {
@@ -63,7 +63,7 @@ body {
 
 .cName {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.4em;
     color: red;
 }
 
