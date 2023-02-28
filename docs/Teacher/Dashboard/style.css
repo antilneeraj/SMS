@@ -11,6 +11,7 @@
     justify-content: space-around;
     align-items: center;
     height:fit-content;
+    height: 52.6%;
 }
 
 [something]{
@@ -18,18 +19,17 @@
     border-radius: 28px;
 }
 
-.caProgress{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-evenly;
-    height: fit-content;
-}
-
 .box.Progress{
-    height: 225px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+svg{
+    display: block;
+    height: 100px;
+    width: 100px;
+    overflow: visible;
 }
 
 .pContainer{
@@ -37,11 +37,14 @@
     width: calc(100% - 50px);
     background: #7833D7;
     border-radius: 28px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .box{
     box-sizing: border-box;
-    height: 275px;
+    height: 100%;
     width: 31.03678929765886%;
     background:rgba(255, 255, 255, .2);
     border-radius: 28px;
