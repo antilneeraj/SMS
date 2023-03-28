@@ -86,5 +86,3 @@
 
 ## Icons
 - [Teacher Avatars](https://www.flaticon.com/packs/teachers-avatars-10)
-- 
-
