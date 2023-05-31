@@ -45,6 +45,67 @@
                 </div>
             </div>
         </div>
+
+        <!-- student details pane -->
+
+        <section class="studentDetails">
+            <header>STUDENT DETAILS <span onclick="document.querySelector('.studentDetails').style.display='none';document.querySelector('#fade').style.display='none'">&Cross;</span></header>
+            <main>
+                <div>
+                    <div>
+                        <div acaDetails>
+                            <div class="img">
+                                <figure>
+                                    <img src="url script se add hoga jis student par click kara hai uski image wala" alt="">
+                                </figure>
+                                <div class="name">ye bhi script se add hoga upar wale ki tarah</div>
+                            </div>
+                            <div class="details">
+
+                            </div>
+                        </div>
+                        <div>
+                            <div generalDetails>
+                                <header>General Details</header>
+                            </div>
+                            <div achievements>
+                                <header>Achievements</header>
+                            </div>
+                        </div>
+                    </div>
+                    <div marksGraph>
+                        <header>Academic Performance</header>
+                        <div class="graph">
+                            <svg height="155px" width="500px">
+                                <path 
+                                  d="M20,5
+                                     v135
+                                     h400
+                                  " fill="none" stroke="black" stroke-width="1px" /> <!-- graph -->
+                                <path 
+                                  d="M20,38.75
+                                     h400
+                                     m-400,33.75
+                                     h400
+                                     m-400,33.75
+                                     h400
+                                  " stroke="gray" stroke-width="1px" /> <!-- field lines -->
+
+                                <!-- value identifiers -->
+                                <!-- on y -->
+                                <text fill="black" x="7" y="152">0</text>
+                                <text fill="black" x="-1" y="112" style="font-size: 14px;">25</text>
+                                <text fill="black" x="-1" y="78" style="font-size: 14px;">50</text>
+                                <text fill="black" x="-1" y="43" style="font-size: 14px;">75</text>
+                                <text fill="black" x="-2" y="10" style="font-size: 12px;">100</text>
+
+                                <!-- on x (ye wale script se dalega kyuki values vary kar sakti hai aur scale badhane ki bhi avashyakta pad sakti hai) -->
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
     </div>
 
     <script src="script.js" async defer></script>

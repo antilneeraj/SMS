@@ -105,3 +105,108 @@
 .sDetails p {
     color: #fff;
 }
+
+/* student details pane */
+
+.studentDetails{
+    height: 625px;
+    width: 70%;
+    position: absolute;
+    color: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, .7);
+    border-radius: 20px;
+    padding: 20px 16px;
+    display: none;
+}
+.studentDetails > header{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid black;
+}
+.studentDetails > header span{
+    float: right;
+    height: 50px;
+    width: 50px;
+    font-size: 45px;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+/* preparing layout */
+
+.studentDetails main > div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+}
+.studentDetails main > div > div:first-child{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0 15px;
+}
+.studentDetails main > div > div:first-child > div:last-child{
+    display: flex;
+    flex-flow: column nowrap;
+    width: calc(75% - 7.5px);
+    justify-content: space-between;
+    height: 350px;
+}
+
+[acaDetails], [generalDetails], [achievements], [marksGraph]{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+[acaDetails]{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: calc(25% - 7.5px);
+    padding: 20px;
+}
+[marksGraph], [generalDetails], [achievements]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+[generalDetails], [achievements]{
+    height: calc(50% - 7.5px);
+}
+[marksGraph]{
+    height: 200px;
+}
+[acaDetails] .img{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+[acaDetails] figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 65px;
+}
+[acaDetails] figure img{
+    height: 100%;
+}
+[acaDetails] .img{
+    border-bottom: 1px solid black;
+}
+[acaDetails] .name{
+    font-size: 20px;
+    text-align: center;
+}
+[generalDetails] header, [achievements] header, [marksGraph] header{
+    font-size: 20px;
+    text-transform: uppercase;
+}

@@ -79,7 +79,7 @@ const template = `
             </a>
 
             <div class="top-heading">
-                <p>STUDENT DETAILS</p>
+                <p>ADD STUDENT</p>
             </div>
             <div class="container">
                 <div class="genedu cont">

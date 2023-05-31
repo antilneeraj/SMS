@@ -49,6 +49,12 @@ svg {
   border-radius: 28px;
 }
 
+.cal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Calendar */
 .wrapper {
   width: 450px;
@@ -56,8 +62,9 @@ svg {
   border-radius: 10px;
   -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  transform:scale(0.7);
+  transform: scale(0.7);
   transform-origin: 0 0;
+  flex-shrink: 0;
 }
 .wrapper header {
   display: -webkit-box;
@@ -96,22 +103,23 @@ header .icons span {
   margin-right: -10px;
 }
 header .icons span:hover {
-  background: #f2f2f2;
+  scale: 1.1;
 }
 header .current-date {
   font-size: 1.45rem;
   font-weight: 500;
 }
 
-.icons span svg{
-    color: #fff;
-    transform: scale(0.3);
-    transform-origin: 0 0;
+.icons span svg {
+  color: #fff;
+  transform: scale(0.3);
+  transform-origin: 0 0;
 }
 
 .calendar {
   padding: 20px;
 }
+
 .calendar ul {
   display: -webkit-box;
   display: -ms-flexbox;
