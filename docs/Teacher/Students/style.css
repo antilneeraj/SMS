@@ -112,21 +112,21 @@
     height: 625px;
     width: 70%;
     position: absolute;
-    color: black;
+    color: white;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, .7);
+    background: rgba(0, 0, 0, .2);
+    box-shadow: 0 0 5px black;
     border-radius: 20px;
     padding: 20px 16px;
     display: none;
 }
 .studentDetails > header{
-    text-align: center;
-    color: black;
+    text-align: left;
     font-size: 25px;
     padding-bottom: 16px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
 }
 .studentDetails > header span{
     float: right;
@@ -160,7 +160,7 @@
 }
 
 [acaDetails], [generalDetails], [achievements], [marksGraph]{
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 20px;
 }
 [acaDetails]{
@@ -200,7 +200,7 @@
     height: 100%;
 }
 [acaDetails] .img{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
 }
 [acaDetails] .name{
     font-size: 20px;

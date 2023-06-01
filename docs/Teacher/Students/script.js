@@ -1,6 +1,31 @@
 function pointCreator(){
     const point = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     point.setAttribute('r', '2');
+    point.setAttribute('stroke', 'lightgray');
+    point.addEventListener('mouseover', e => {
+        if(point.label){
+            const r = point.getBoundingClientRect();
+            const marks = document.createElement('p');
+            marks.innerHTML = point.label;
+            marks.setAttribute('style', `
+                position: absolute;
+                left: ${r.left}px;
+                top: ${r.top-30}px;
+                zIndex: 10000;
+                padding: 5px;
+                color: white;
+                backdrop-filter: blur(3px);
+                border-radius: 5px;
+                background: rgba(0,0,0,0.3);
+            `)
+            point.style.stroke = 'white';
+            document.body.append(marks);
+            point.addEventListener('mouseout', e => {
+                marks.remove();
+                point.style.stroke='lightgray';
+            }, {once:true})
+        }
+    })
 
     return point
 }
@@ -14,36 +39,37 @@ function studentDetails(e, data){
         if(Math.max(data.marks[key])>maxVal) maxVal = Math.max(data.marks[key])
         lengths.push(data.marks[key].length);
     }
-    const distDiff = 390/Math.max(...lengths);   // yaha par 400 graph ki width hai, fixed rahegi vo, agar badhani pade to isse bhi change kar diyo nhi to sirf 400 tak hi graph plot hoga.
+    const distDiff = 400/(Math.max(...lengths)-1);   // yaha par 400 graph ki width hai, fixed rahegi vo, agar badhani pade to isse bhi change kar diyo nhi to sirf 400 tak hi graph plot hoga.
     const valDiff = maxVal/keys.length;
 
     // <text fill="black" x="-2" y="10" style="font-size: 12px;">100</text>
     const y = 155; // ye bhi fixed rahegi y values ke liye for coordinates on x axis of graph. agar upar niche kare go isse bhi badal diyo.
-    for(let i = 0; i<data.marks[keys[0]].length; i++){
+    for(let i = 0; i<Math.max(...lengths)-1; i++){
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('y', y);
         text.setAttribute('x', 20+distDiff*(i+1)); // yaha par 20 constant hai, ye hai graph ki x axis par origin(not 0, but initial or 0 x point uhmmm... search kar liyo samjhaya nhi jayega) se doori
         text.innerHTML = i+1;
-        text.setAttribute('style', 'font-size: 14px;')
+        text.setAttribute('style', 'font-size: 14px; fill: white;')
         document.querySelector('[marksGraph] svg').append(text);
     }
-    const colors=['blue', 'red', 'green', 'yellow', 'purple', 'white', 'black'];
+    const colors=['lightblue', 'red', 'lightgreen', 'orange', 'yellow', 'white', 'pink'];
     keys.forEach((key, index) => {
         const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
         polyline.setAttribute('fill', 'none');
         polyline.setAttribute('stroke', colors[index]);
         polyline.setAttribute('points', '');
+        document.querySelector('[marksGraph] svg').append(polyline);
         data.marks[key].forEach((marks, index) => {
             const y = 140-((marks/100)*130);
-            const x = 20+distDiff*(index+1);
+            const x = 20+distDiff*index;
             polyline.setAttribute("points", polyline.getAttribute('points') + `${x},${y} `);
             const point = pointCreator();
-            point.setAttribute('cx', x-(Number(point.getAttribute('r'))/2))
-            point.setAttribute('cy', y-(Number(point.getAttribute('r'))/2))
+            point.setAttribute('cx', x)
+            point.setAttribute('cy', y)
             point.setAttribute('fill', polyline.getAttribute('stroke'));
+            point.label = marks+'%';
             document.querySelector('[marksGraph] svg').append(point);
         })
-        document.querySelector('[marksGraph] svg').append(polyline);
     })
 }
 
@@ -69,7 +95,7 @@ window.addEventListener('load', e => {
             achievements:[], 
             marks: {
                 "First Year":[40, 50, 80, 60, 70],               /** ya fir subject wise, semester wise, sessional wise etc. saaro ka ikatha bhi ho sakta hai, lekin fir usme subject wise include mat karna. */
-                "Second Year":[90, 30, 60, 90, 87], 
+                "Second Year":[90, 30, 60, 90, 87, 30], 
                 "Third Year":[76, 83, 100, 95, 90]
             }, 
             rollNo:007, 
