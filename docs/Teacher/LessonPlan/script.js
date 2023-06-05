@@ -1,5 +1,7 @@
 window.onload = e => {
     const subjects = ['PHP', 'Data Communication', 'Digital Electronics'];
+    const progress = [60, 20, 85]; // must be in percentage
+    const colors = ['lightblue', 'red', 'lightgreen', 'orange', 'yellow', 'white', 'pink'];
 
     const count = Math.floor(document.querySelector('.mainChild').getBoundingClientRect().height/64);
 
@@ -8,7 +10,9 @@ window.onload = e => {
         tr.innerHTML = `
             <td>${i+1}</td>
             <td>${subjects[i]?subjects[i]:''}</td>
-            <td></td>
+            <td>
+                <div progressBar></div>
+            </td>
             <td>
             <div style = 'display: flex;justify-content:center;align-items:center'>1&nbsp;
                 <input type="checkbox">&nbsp;2&nbsp;
@@ -21,5 +25,17 @@ window.onload = e => {
         tr.style.height = document.querySelector(".mainChild").getBoundingClientRect().height/(count+1)+'px';
         tr.lastElementChild.children[0].addEventListener('click', e => window.location.href = e.target.innerHTML);
         document.querySelector('table').append(tr);
+        const progressBar = document.querySelectorAll('[progressBar]')[i];
+        // const progressDiv = document.querySelector('[progress]');
+        progressBar.setAttribute('style', `
+            background: ${colors[i]};
+            height: 20px;
+            width: 100%;
+            border-radius: 1in;
+            color: black;
+            transition: box-shadow .4s;
+        `);
+        setTimeout(e => progressBar.style.boxShadow = `inset -${progressBar.getBoundingClientRect().width*(100-progress[i])/100}px 0 0 rgba(0, 0, 0, 0.4)`, 100); // timeout isliye lagaya taaki transition dikh sake, nhi to kismat mei ho tab dikhta tha.
+        progressBar.innerHTML = progress[i]+'%';
     }
 }

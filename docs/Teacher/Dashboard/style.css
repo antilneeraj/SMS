@@ -81,11 +81,9 @@ svg {
 /* Calendar */
 .wrapper {
   width: 450px;
-  background: #fff;
+  background: #0000;
   border-radius: 10px;
-  -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  transform: scale(0.6);
+  transform: scale(0.7);
   flex-shrink: 0;
 }
 .wrapper header {
@@ -99,7 +97,7 @@ svg {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: #7833d7;
+  background: #0000;
   border-radius: 10px 10px 0 0;
 }
 header .icons {
@@ -158,12 +156,13 @@ header .current-date {
   margin-bottom: 20px;
 }
 .calendar li {
-  color: #333;
+  color: #fff;
   width: calc(100% / 7);
   font-size: 1.07rem;
 }
 .calendar .weeks li {
   font-weight: 500;
+  font-size: 25px;
   cursor: default;
 }
 .calendar .days li {
@@ -196,4 +195,7 @@ header .current-date {
 }
 .days li:not(.active):hover::before {
   background: #f2f2f2;
+}
+.days li:not(.active):hover{
+  color: black;
 }

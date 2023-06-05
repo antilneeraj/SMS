@@ -40,7 +40,7 @@
                     <img src="testImg/1.png" height="100%" alt="sIco">
                 </div>
                 <div class="sDetails">
-                    <h3 style="font-family: 'omega sans';">Neeraj</h3>
+                    <h3 class="sName" style="font-family: 'omega sans';">Neeraj</h3>
                     <p>200130800027</p>
                 </div>
             </div>
@@ -61,22 +61,38 @@
                                 <div class="name">ye bhi script se add hoga upar wale ki tarah</div>
                             </div>
                             <div class="details">
-
+                                <span class="rollno"></span>
+                                <span class="semester"></span>
+                                <span class="batch"></span>
+                                <span class="ranking"></span>
                             </div>
                         </div>
                         <div>
                             <div generalDetails>
                                 <header>General Details</header>
+                                <div class="details">
+                                    <span class="dob"></span>
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <span class="fName"></span>
+                                        <span class="mName"></span>
+                                    </div>
+                                    <span class="address"></span>
+                                    <div style="display: flex;justify-content: space-between;">
+                                        <span class="mob"></span>
+                                        <span class="email"></span>
+                                    </div>
+                                </div>
                             </div>
                             <div achievements>
                                 <header>Achievements</header>
+                                <ul style="margin-left: 1em;"></ul>
                             </div>
                         </div>
                     </div>
                     <div marksGraph>
                         <header>Academic Performance</header>
                         <div class="graph">
-                            <svg height="155px" width="500px">
+                            <svg height="155px" width="600px">
                                 <path 
                                   d="M20,5
                                      v135
@@ -100,8 +116,10 @@
                                 <text fill="white" x="-1" y="78" style="font-size: 14px;">50</text>
                                 <text fill="white" x="-1" y="43" style="font-size: 14px;">75</text>
                                 <text fill="white" x="-2" y="10" style="font-size: 12px;">100</text>
-
+                                
                                 <!-- on x (ye wale script se dalega kyuki values vary kar sakti hai aur scale badhane ki bhi avashyakta pad sakti hai) -->
+                                <!-- legends NOTE: maximum length of legend is 18, any more characters will be hidden. wrap is off. -->
+                                <!-- ye bhi script se add honge -->
                             </svg>
                         </div>
                     </div>
