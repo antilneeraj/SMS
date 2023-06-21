@@ -135,7 +135,7 @@ img[alt='logo'] {
     display: flex;
     margin-top: 35px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 82.5px);
 }
 
 /* Search Section */

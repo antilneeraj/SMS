@@ -1,6 +1,6 @@
 window.onload = e => {
     const subjects = ['PHP', 'Data Communication', 'Digital Electronics'];
-    const progress = [60, 20, 85]; // must be in percentage
+    const progress = [60, 40, 85]; // must be in percentage
     const colors = ['lightblue', 'red', 'lightgreen', 'orange', 'yellow', 'white', 'pink', 'lightgrey'];
 
     const count = Math.floor(document.querySelector('.mainChild').getBoundingClientRect().height/64);

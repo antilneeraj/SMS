@@ -153,7 +153,7 @@ window.addEventListener('load', e => {
                 "sample key 2":[90, 30, 60, 90, 87, 30], 
                 "sample key 3":[76, 83, 100, 95, 90]
             }, 
-            rollNo:007, 
+            rollNo: 7, 
             semester:undefined, 
             batch:undefined, 
             ranking: undefined
