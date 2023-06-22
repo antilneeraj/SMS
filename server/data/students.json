@@ -1,22 +1,5 @@
 [
   {
-    "name": "Neeraj ",
-    "dob": "2005-03-26",
-    "gender": "male",
-    "fatherName": "Mukesh",
-    "motherName": "Rakesh",
-    "rollNo": "200130800027",
-    "batch": "2020",
-    "semester": "VI",
-    "admissionType": "DET",
-    "state": "Haryana",
-    "district": "Sonipat",
-    "village": "Khewara",
-    "email": "neeraj@example.com",
-    "studentPhone": "9466945354",
-    "parentPhone": "9034988654"
-  },
-  {
     "rollNo": 200130800002,
     "name": "Abhishek Kumar",
     "fatherName": "Pankaj Kumar",
