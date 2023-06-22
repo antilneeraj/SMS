@@ -35,6 +35,11 @@ function pointCreator(){
 }
 
 function studentDetails(e, data){
+
+    ['rollNo', 'semester', 'batch', 'ranking', 'dob', 'motherName', 'fatherName', 'studentPhone', 'email', 'address'].forEach(key => {
+        document.querySelector('.'+key).innerText = data[key];
+    })
+
     const sd = document.querySelector('.studentDetails');
     sd.style.display = 'block';
     document.getElementById('fade').style.display='block';
@@ -43,8 +48,21 @@ function studentDetails(e, data){
     const img = sd.querySelector('.img figure img');
     img.setAttribute('src', data.imgurl);
 
-    data.achievements.forEach(achievement => {
+    document.querySelector('[achievements] ul').innerHTML = '';
+
+    (data.achievements.length>5?[{
+        achievement: 'see more...', 
+        style: 'list-style:none; cursor: pointer; text-decoration: underline', 
+        onclick(){
+            popup('Achievements', `<ul>${data.achievements.map(achievement => `<li>${achievement}</li>`).reverse().join('')}`, 'Close', (e, popup) => popup.remove(), true)
+        }
+    }].concat(...data.achievements.slice(data.achievements.length-5,data.achievements.length)):data.achievements).forEach(achievement => {
         const li = document.createElement('li');
+        if(typeof achievement === 'object'){
+            li.setAttribute('style', achievement.style);
+            li.onclick = achievement.onclick;
+            achievement = achievement.achievement;
+        }
         li.innerHTML = achievement;
         sd.querySelector('[achievements] ul').insertAdjacentElement('afterbegin', li);
     })
@@ -88,7 +106,7 @@ function studentDetails(e, data){
         text.setAttribute('y', 20*(count+1));
 
         const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        [['x', 428], ['y', 20*(count+0.45)], ['height', '12.5px'], ['width', '12.5px'], ['fill', colors[index]], ['stroke', 'white'], ['stroke-width', '1.5']].forEach(pair => rect.setAttribute(pair[0], pair[1]));
+        [['x', 428], ['y', 20*(count+0.45)], ['height', '12.5px'], ['width', '12.5px'], ['fill', colors[index]], ['stroke', 'white'], ['stroke-width', '1.5'], ['rx', '10']].forEach(pair => rect.setAttribute(pair[0], pair[1]));
 
 
         sd.querySelector('[marksGraph] svg').append(rect, text);
@@ -107,55 +125,56 @@ function studentDetails(e, data){
     })
 }
 
-window.addEventListener('load', e => {
+window.addEventListener('load', async e => {
 
     const add = document.querySelector('#add');
-    add.style.marginTop = add.parentElement.getBoundingClientRect().height - add.getBoundingClientRect().height - 10 + 'px'
-    add.style.marginLeft = add.parentElement.getBoundingClientRect().width - add.getBoundingClientRect().width - 10 + 'px';
+    function positionAddBtn(){
+        add.style.marginTop = add.parentElement.getBoundingClientRect().height - add.getBoundingClientRect().height - 10 + 'px'
+        add.style.marginLeft = add.parentElement.getBoundingClientRect().width - add.getBoundingClientRect().width - 10 + 'px';
+    }
+    window.addEventListener('resize', positionAddBtn)
+    positionAddBtn();
 
-    // database code here
-
-
-    // is niche wale ko uncomment kar diyo baad mei jab database wala code aayega.
+    const res = await fetch('http://localhost:2080', {method: 'POST', body: JSON.stringify({requestFor: 'studentsList'})})
+    const studentsArr = await res.json()
 
     // let students be an array of objects
-    // students.forEach(student => {
-    //     `<div class="student">
-    //         <div class="uImg">
-    //             <img src="${student.imgurl}" height="100%" alt="sIco" />
-    //         </div>
-    //         <div class="sDetails">
-    //             <h3 class="sName" style="font-family: 'omega sans';">${student.name}</h3>
-    //             <p>${student.rollno}</p>
-    //         </div>
-    //     </div>`
-    // })
+    studentsArr.sort((a, b) => a.rollNo - b.rollNo).forEach(student => {
+        document.querySelector('.students').insertAdjacentHTML('beforeend', `
+            <div class="student">
+                <div class="uImg">
+                    <img src="Pictures/${student.gender==='male'?'':'fe'}male.png" height="100%" alt="sIcon" />
+                </div>
+                <div class="sDetails">
+                    <p class="sName" style="font-family: 'Montserrat';">${student.name.split(' ')[0]}</p>
+                    <p>${student.rollNo}</p>
+                </div>
+            </div>`
+        )
+    })
 
     document.body.append(document.querySelector('.studentDetails'))
     const students = [...document.querySelector('.students').children];
-    students.forEach(student => {
-
-        // general details, aca details, marks(except graph), aur achievements(overflow) ki script likhni rehti hai, unko dikhne ke liye, vo khud bhi kar liyo bs elements to get karke unke andar feed hi to karna hai.
-
+    students.forEach((student, index) => {
         // feed the database variables here in this object, baaki ka kaam vo khud sambhal lega.
         const data = {
-            name: e.target.querySelector('.sName').innerHTML, // isme daalne ki koi jarurat nhi hai
-            fName:undefined, 
-            mName:undefined, 
-            mob:undefined, 
-            email:undefined, 
-            dob:undefined, 
-            imgurl: e.target.querySelector('.uImg img').getAttribute('src'), // isme bhi daalne ki koi jarurat nhi hai
-            address:undefined, 
-            achievements:['college mei pehla aaya tha, padhai mei', 'college mei pehla athlete', 'ye test achievements hai.', 'sabse last wali achievement sabse pehle aayegi, is baat ka dhyan rakhna'],  // the last achievement will be shown first, reason - ek nayi achievement jab append hogi, to latest ko sabse upar dikhana sahi hai aur jo purani hoti jaye vo niche jaati jaye.
+            name: studentsArr[index].name, // isme daalne ki koi jarurat nhi hai
+            fatherName: studentsArr[index].fatherName, 
+            motherName: studentsArr[index].motherName, 
+            studentPhone: studentsArr[index].studentPhone, 
+            email: studentsArr[index].email, 
+            dob: studentsArr[index].dob, 
+            imgurl: `Pictures/${studentsArr[index].gender==='male'?'':'fe'}male.png`, // isme bhi daalne ki koi jarurat nhi hai
+            address: `${studentsArr[index].village}, ${studentsArr[index].district}, ${studentsArr[index].state}`,
+            achievements:['college mei pehla aaya tha, padhai mei', 'college mei pehla athlete', 'ye test achievements hai.', 'sabse last wali achievement sabse pehle aayegi, is baat ka dhyan rakhna', 'saastri ji', 'mr. India'],  // the last achievement will be shown first, reason - ek nayi achievement jab append hogi, to latest ko sabse upar dikhana sahi hai aur jo purani hoti jaye vo niche jaati jaye.
             marks: {
                 "sample key 1":[40, 50, 80, 60, 70],               /** ya fir subject wise, semester wise, sessional wise etc. saaro ka ikatha bhi ho sakta hai, lekin fir usme subject wise include mat karna. */
                 "sample key 2":[90, 30, 60, 90, 87, 30], 
                 "sample key 3":[76, 83, 100, 95, 90]
             }, 
-            rollNo: 7, 
-            semester:undefined, 
-            batch:undefined, 
+            rollNo: studentsArr[index].rollNo, 
+            semester: studentsArr[index].semester, 
+            batch: studentsArr[index].batch,
             ranking: undefined
         }
 

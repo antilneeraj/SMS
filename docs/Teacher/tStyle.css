@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700');
+
 * {
     margin: 0%;
     padding: 0%;
@@ -9,6 +11,62 @@ body {
     background-size: cover;
     height: 100vh;
     color: white;
+}
+
+/* popup */
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    border-radius: 28px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    z-index: 1002;
+    overflow: auto;
+}
+.popup ul{
+    padding-left: 10px;
+}
+.popup header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.popup header .cross{
+    padding: 10px;
+    color: white;
+}
+.popup header .cross:hover{
+    cursor: pointer;
+    color: rgba(205, 205, 205, 1);
+    border-radius: 50%;
+}
+.popup .body{
+    color: white;
+    margin-bottom: 10px;
+}
+.popup button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(64, 50, 187, .8);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    float: right;
+    transition: background-color .4s, color .4s, box-shadow .4s;
+}
+.popup button:hover{
+    color: rgb(64, 50, 187);
+    box-shadow: 1px 1px 10px gray;
+    background-color: white;
 }
 
 /* Saab ka parent */
@@ -204,10 +262,11 @@ img[alt='logo'] {
     height: 650px;
     padding: 16px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(0, 0, 0, .2);
     z-index: 1002;
     overflow: auto;
     font-family: 'Trebuchet MS';
+    color: white;
 }
 
 .close-logo {
@@ -226,7 +285,6 @@ img[alt='logo'] {
     padding: 0 0 20px 0;
     font-size: 20px;
     font-weight: bold;
-    color: black;
 }
 
 .elements {
@@ -236,12 +294,20 @@ img[alt='logo'] {
     align-items: center;
     justify-content: space-between;
     margin: 10px 0;
-    color: black;
 }
 
-.elements>input {
+.elements div{
+    height: 100%;
+    width: 350px;
+    display: flex;
+}
+.elements div select{
+    width: 50%;
+}
+
+.elements input, .elements select {
     height: calc(100% - 10px);
-    width: 300px;
+    width: 100%;
     border: 1px solid dimgrey;
     border-radius: 3px;
     outline: none;
@@ -250,7 +316,7 @@ img[alt='logo'] {
     transition: border .2s, box-shadow .2s;
 }
 
-.elements>input:focus {
+.elements input:focus, .elements select:focus {
     border: 1px solid rgb(64, 50, 187);
     box-shadow: 0 0 2px 0 rgba(64, 50, 187, .5);
 }
@@ -266,7 +332,6 @@ img[alt='logo'] {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-    color:black;
 }
 
 .container>div {
