@@ -135,7 +135,7 @@ window.addEventListener('load', async e => {
     window.addEventListener('resize', positionAddBtn)
     positionAddBtn();
 
-    const res = await fetch('http://localhost:2080', {method: 'POST', body: JSON.stringify({requestFor: 'studentsList'})})
+    const res = await fetch(serverURL, {method: 'POST', body: JSON.stringify({requestFor: 'studentsList'})})
     const studentsArr = await res.json()
 
     // let students be an array of objects

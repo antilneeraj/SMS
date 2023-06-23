@@ -95,9 +95,10 @@ body {
 
 /* Rectangle 1 */
 .rectangle1 {
-  background: rgba(171, 255, 227, 0.4);
+  /* background: rgba(171, 255, 227, 0.4); */
+  background: linear-gradient(140deg, rgba(33,59,134,0.7) 0%, rgba(32,56,128,0) 100%);
   box-shadow: inset 1px 4px 47px rgba(0, 0, 0, 0.06);
-  border-radius: 76px;
+  border-radius: 50px;
 }
 
 
@@ -138,9 +139,10 @@ body {
 
 /* Rectangle 1 */
 .rectangle2 {
-  background: rgba(220, 236, 255, 0.4);
+  /* background: rgba(220, 236, 255, 0.4); */
+  background: linear-gradient(322deg, rgba(120,77,192,0.7) 0%, rgba(120,77,192,0) 100%);
   box-shadow: inset 1px 4px 47px rgba(0, 0, 0, 0.06);
-  border-radius: 76px;
+  border-radius: 50px;
 }
 
 
@@ -209,7 +211,7 @@ body {
 }
 
 .input {
-  background: #224957;
+  background: rgba(120,77,192,0.3);
   height: 25px;
   width: 300px;
   color: white;
@@ -242,7 +244,7 @@ body {
   flex-flow: column wrap;
   font-size: 16px;
   background: none;
-  background-color: #0f6400;
+  background-color: rgba(120,77,192,0.7);
 }
 
 .text {
@@ -260,7 +262,7 @@ body {
   border-radius: inherit;
   justify-content: center;
   align-items: center;
-  background: #57b846;
+  background: rgba(120,77,192,1);
   padding-left: 70px;
   font-size: 20px;
   transition: width .4s, padding .4s, margin-left .4s;

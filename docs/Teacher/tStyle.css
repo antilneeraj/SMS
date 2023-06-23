@@ -72,8 +72,8 @@ body {
 /* Saab ka parent */
 
 .white {
-    height: calc(100vh - 70px);
-    width: calc(100vw - 70px);
+    height: calc(100vh - 25px);
+    width: calc(100vw - 25px);
     border-radius: 28px;
     display: flex;
     flex-flow: row;

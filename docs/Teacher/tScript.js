@@ -205,6 +205,7 @@ const template = `
 </div>`
 
 document.head.innerHTML += `<link rel='stylesheet' href='../tStyle.css'>`;
+const serverURL = 'http://localhost:2080';
 
 const folder = window.location.pathname.slice(window.location.pathname.lastIndexOf('/', window.location.pathname.lastIndexOf('/')-1), window.location.pathname.lastIndexOf('/'));
 
@@ -296,6 +297,7 @@ function excelFileToJSON(file){
                 }
             });
             const json = JSON.stringify(result, null, 4);
+
             workbook.SheetNames.forEach(sheetName => {
                 addStudents(JSON.parse(json)[sheetName])
             })
@@ -310,7 +312,7 @@ function excelFileToJSON(file){
 
 // add student
 
-const res = fetch('http://localhost:2080', {
+const res = fetch(serverURL, {
     method: 'POST',
     body: JSON.stringify({
         requestFor: 'statesDistricts'
@@ -356,7 +358,7 @@ const res = fetch('http://localhost:2080', {
 
 
 function addStudents(students){
-    fetch('http://localhost:2080', {
+    fetch(serverURL, {
         method: 'POST',
         body: JSON.stringify({
             requestFor: 'addStudents',
