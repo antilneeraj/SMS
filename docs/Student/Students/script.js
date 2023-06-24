@@ -34,15 +34,13 @@ function pointCreator(){
     return point
 }
 
-function studentDetails(e, data){
+function studentDetails(data){
 
     ['rollNo', 'semester', 'batch', 'ranking', 'dob', 'motherName', 'fatherName', 'studentPhone', 'email', 'address'].forEach(key => {
         document.querySelector('.'+key).innerText = data[key];
     })
 
     const sd = document.querySelector('.studentDetails');
-    sd.style.display = 'block';
-    document.getElementById('fade').style.display='block';
     const name = sd.querySelector('.name');
     name.innerHTML = data.name;
     const img = sd.querySelector('.img figure img');
@@ -126,60 +124,33 @@ function studentDetails(e, data){
 }
 
 window.addEventListener('load', async e => {
+    const res = await fetch(serverURL, {method: 'POST', body: JSON.stringify({requestFor: 'student', rollNo: '200130800027'})}); // yaha par rollNo variable mei daal dena, jo bhi roll no. hai uska.
+    const student = await res.json();
 
-    const add = document.querySelector('#add');
-    function positionAddBtn(){
-        add.style.marginTop = add.parentElement.getBoundingClientRect().height - add.getBoundingClientRect().height - 10 + 'px'
-        add.style.marginLeft = add.parentElement.getBoundingClientRect().width - add.getBoundingClientRect().width - 10 + 'px';
-    }
-    window.addEventListener('resize', positionAddBtn)
-    positionAddBtn();
-
-    const res = await fetch(serverURL, {method: 'POST', body: JSON.stringify({requestFor: 'studentsList'})})
-    const studentsObj = await res.json();
+    document.querySelector('.search-group').remove();
 
     // let students be an array of objects
-    const rollNos = Object.keys(studentsObj);
 
-    rollNos.sort((a, b) => a - b).forEach(rollNo => {
-        document.querySelector('.students').insertAdjacentHTML('beforeend', `
-            <div class="student">
-                <div class="uImg">
-                    <img src="Pictures/${studentsObj[rollNo].gender==='male'?'':'fe'}male.png" height="100%" alt="sIcon" />
-                </div>
-                <div class="sDetails">
-                    <p class="sName" style="font-family: 'Montserrat';">${studentsObj[rollNo].name.split(' ')[0]}</p>
-                    <p>${rollNo}</p>
-                </div>
-            </div>`
-        )
-    })
-
-    document.body.append(document.querySelector('.studentDetails'))
-    const students = [...document.querySelector('.students').children];
-    students.forEach((student, index) => {
-        // feed the database variables here in this object, baaki ka kaam vo khud sambhal lega.
-        const data = {
-            name: studentsObj[rollNos[index]].name, // isme daalne ki koi jarurat nhi hai
-            fatherName: studentsObj[rollNos[index]].fatherName, 
-            motherName: studentsObj[rollNos[index]].motherName, 
-            studentPhone: studentsObj[rollNos[index]].studentPhone, 
-            email: studentsObj[rollNos[index]].email, 
-            dob: studentsObj[rollNos[index]].dob, 
-            imgurl: `Pictures/${studentsObj[rollNos[index]].gender==='male'?'':'fe'}male.png`, // isme bhi daalne ki koi jarurat nhi hai
-            address: `${studentsObj[rollNos[index]].address}`,
-            achievements:['college mei pehla aaya tha, padhai mei', 'college mei pehla athlete', 'ye test achievements hai.', 'sabse last wali achievement sabse pehle aayegi, is baat ka dhyan rakhna', 'saastri ji', 'mr. India'],  // the last achievement will be shown first, reason - ek nayi achievement jab append hogi, to latest ko sabse upar dikhana sahi hai aur jo purani hoti jaye vo niche jaati jaye.
-            marks: {
-                "sample key 1":[40, 50, 80, 60, 70],               /** ya fir subject wise, semester wise, sessional wise etc. saaro ka ikatha bhi ho sakta hai, lekin fir usme subject wise include mat karna. */
-                "sample key 2":[90, 30, 60, 90, 87], 
-                "sample key 3":[76, 83, 100, 95, 90]
-            }, 
-            rollNo: rollNos[index], 
-            semester: studentsObj[rollNos[index]].semester, 
-            batch: studentsObj[rollNos[index]].batch,
-            ranking: undefined
-        }
-
-        student.addEventListener('click', e => studentDetails(e, data));
-    })
+    // feed the database variables here in this object, baaki ka kaam vo khud sambhal lega.
+    const data = {
+        name: student.name, // isme daalne ki koi jarurat nhi hai
+        fatherName: student.fatherName, 
+        motherName: student.motherName, 
+        studentPhone: student.studentPhone, 
+        email: student.email, 
+        dob: student.dob, 
+        imgurl: `Pictures/${student.gender==='male'?'':'fe'}male.png`, // isme bhi daalne ki koi jarurat nhi hai
+        address: `${student.address}`,
+        achievements:['Sample achievement 1', 'Sample achievement 2', 'Sample achievement 3', 'Sample achievement 4', 'Sample achievement 5', 'Sample achievement 6'],  // the last achievement will be shown first, reason - ek nayi achievement jab append hogi, to latest ko sabse upar dikhana sahi hai aur jo purani hoti jaye vo niche jaati jaye.
+        marks: {
+            "sample key 1":[40, 50, 80, 60, 70],               /** ya fir subject wise, semester wise, sessional wise etc. saaro ka ikatha bhi ho sakta hai, lekin fir usme subject wise include mat karna. */
+            "sample key 2":[90, 30, 60, 90, 87], 
+            "sample key 3":[76, 83, 100, 95, 90]
+        }, 
+        rollNo: student.rollNo, 
+        semester: student.semester, 
+        batch: student.batch,
+        ranking: undefined
+    }
+    studentDetails(data);
 })

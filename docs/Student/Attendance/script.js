@@ -21,15 +21,14 @@ window.addEventListener('load', async function(e) {
         }),
         // headers: {'Content-Type': 'application/json'}
     })
-    const students = await res.json(); // object
+    const students = await res.json()
 
-    const rollNos = Object.keys(students);
-    rollNos.sort((a,b)=>a-b).forEach((rollNo, index) => {
+    students.sort((a,b)=>a.rollNo-b.rollNo).forEach((student, index) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${index+1}</td>
-            <td>${rollNo}</td>
-            <td class="name">${students[rollNo].name}</td>
+            <td>${student.rollNo}</td>
+            <td class="name">${student.name}</td>
             <td><input type='checkbox' height='100%' width='100%'></td>
             <td><input type='checkbox' height='100%' width='100%'></td>
         `;
