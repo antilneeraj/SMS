@@ -1,15 +1,24 @@
 window.onload = e => {
-    const subjects = ['PHP', 'Data Communication', 'Digital Electronics'];
-    const progress = [60, 40, 85]; // must be in percentage
+    const subjects = {
+        PHP: 75,
+        'Data Communication': 40,
+        'Digital Electronics': 65,
+        Python: 90,
+        MOAD: 80,
+        'Network Security': 85,
+        Java: 80,
+        'Microprocessors and Peripheral Devices': 60
+    }
     const colors = ['lightblue', 'red', 'lightgreen', 'orange', 'yellow', 'white', 'pink', 'lightgrey'];
 
     const count = Math.floor(document.querySelector('.mainChild').getBoundingClientRect().height/64);
 
+    const keys = Object.keys(subjects)
     for(let i=0;i<count;i++){
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${i+1}</td>
-            <td>${subjects[i]?subjects[i]:''}</td>
+            <td style='text-align: left;'>${keys[i]?keys[i]:''}</td>
             <td>
                 <div progressBar></div>
             </td>
@@ -35,7 +44,8 @@ window.onload = e => {
             color: black;
             transition: box-shadow .4s;
         `);
-        setTimeout(e => progressBar.style.boxShadow = `inset -${progressBar.getBoundingClientRect().width*(100-progress[i])/100}px 0 0 rgba(0, 0, 0, 0.4)`, 100); // timeout isliye lagaya taaki transition dikh sake, nhi to kismat mei ho tab dikhta tha.
-        progressBar.innerHTML = progress[i]+'%';
+        setTimeout(e => progressBar.style.boxShadow = `inset -${progressBar.getBoundingClientRect().width*(100-subjects[keys[i]])/100}px 0 0 rgba(0, 0, 0, 0.4)`, 100); // timeout isliye lagaya taaki transition dikh sake, nhi to kismat mei ho tab dikhta tha.
+        progressBar.innerHTML = subjects[keys[i]]+'%';
     }
+    
 }

@@ -7,8 +7,6 @@ const template = `
     <div firstdiv>
         <div class="site-logo">
             <span style=" font-size: 20px;">SMS</span>
-            <span style="color: #5649F2;  font-size: 20px;">.com
-            </span>
         </div>
         <div class="menu-group">
             <a href='../Dashboard'>
@@ -39,7 +37,7 @@ const template = `
         <div class="user-group">
             <div class="user-logo" style="display: flex; align-items: center;">
                 <img src="../icons/teacher.svg" alt="logo">
-                <p style="margin-left: 10px;">Sunita Lather</p>
+                <p style="margin-left: 10px;">Dr. Naresh Gill</p>
             </div>
             
             <div class="logout-btn">

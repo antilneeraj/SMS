@@ -23,10 +23,32 @@
           justify-content: space-around;
         "
       >
-        <p something></p>  <!-- <--- this is the major box of old dashboard design, also uncommment the related script if old dashboard design is to be continued. Aur saath mei progress wala box aayega iske. -->
+        <div something>
+          <div class="greeting">Welcome,</div>
+          <div class="name">Dr. Naresh Gill</div>
+          <div class="designation">Lecturer</div>
+          <div class="branch">Computer Engineering Department</div>
+        </div>
 
-        <div class="idcard box">
+        <div class="idcard box" style="display: flex;flex-flow: column nowrap; align-items: flex-end;">
           <iframe src="assets/index.html" height="100%" width="100%" frameborder="0"></iframe>
+          <div class="download">
+            <svg style="scale: 0.25">
+              <path 
+                d="M50,0
+                   v50
+                   l-25,-25
+                   m50,0
+                   l-25,25
+                   m-40,-10
+                   v30
+                   q0,5 5,5
+                   h70
+                   q5,0 5,-5
+                   v-30
+                " fill="none" stroke="white" stroke-width="6px" style="stroke-linecap: round;stroke-linejoin: round" />
+            </svg>
+          </div>
         </div>
         <!-- <div style="display:flex;flex-flow:column nowrap;">
           <p class="greeting">Welcome,</p>
@@ -108,5 +130,7 @@
 
     <script src="./script.js" async defer></script>
     <script src="../tScript.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../../../plugins/jasonday-printThis-v1.15.0-24-g23be1f8/printThis.js" async defer></script>
   </body>
 </html>

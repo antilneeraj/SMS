@@ -3,6 +3,7 @@ function script() {
 
   // to scale idcard
   document.querySelector('iframe').contentWindow.document.querySelector("html").style.scale='0.75';
+  document.querySelector('.download').addEventListener('click', e => $('iframe').printThis())
 
   // document.querySelector('.search-group').remove()
   // The below is to resize and maintain the old dashboard layout.

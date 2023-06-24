@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .mainChild {
   justify-content: space-between;
   flex-flow: column;
@@ -10,15 +12,16 @@
   font-weight: 900;
 }
 .greeting{
-  margin: 70px 0 10px;
+  margin: 0 0 10px;
   font-size: 25px;
 }
 .name{
+  font-family: 'Montserrat';
   font-size: 40px;
   font-weight: 700;
-  text-decoration: underline;
+  /* text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
+  text-underline-offset: 3px; */
   margin-bottom: 25px;
 }
 .designation, .branch{
@@ -40,8 +43,9 @@
 [something] {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 28px;
+  padding: 25px;
+  box-sizing: border-box;
 }
-
 .box.Progress {
   display: flex;
   align-items: center;
@@ -70,6 +74,29 @@ svg {
   width: 31.03678929765886%;
   background: rgba(0, 0, 0, 0.15);
   border-radius: 28px;
+}
+
+.download{
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  padding: 5px;
+  position: absolute;
+  background: rgb(0, 0, 0, .7);
+  display: none;
+  translate: 0 135px;
+  border-radius: 50%;
+}
+
+.box iframe:hover ~ .download{
+  display: flex;
+}
+
+.download:hover{
+  display: flex;
+  cursor: pointer;
 }
 
 .cal{
