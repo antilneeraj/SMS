@@ -8,12 +8,17 @@ main{
     flex-wrap: wrap;
     overflow-y: auto;
 }
-main::-webkit-scrollbar{
+main::-webkit-scrollbar, .resources::-webkit-scrollbar{
     display: none;
 }
 
 /* main */
 
+.resources{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
 .resource{
     background: rgba(0,0,0,0.2);
     display: flex;
@@ -35,7 +40,7 @@ main div figure{
     background-position: center;
     background-repeat: no-repeat;
 }
-.resource div{
+.resource > div{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;

@@ -76,12 +76,12 @@ const server = http.createServer(async (req, res) => {
                 console.log('loggedOnRoll sent');
             }else if(body.requestFor === 'studentLogin'){
                 loggedOnRoll = body.identifier[0];
-                if(typeof loggedOnRoll === 'string' && students[loggedOnRoll]){
+                if(typeof loggedOnRoll === 'string' && students[loggedOnRoll] && students[loggedOnRoll].dob === body.identifier[1]){
                     res.end(JSON.stringify({message: 'Logged in successfully', done: true}))
-                    console.log('login successful')
+                    console.log('login successful');
                 }else{
                     res.end(JSON.stringify({message: 'Login unsuccessful', done: false}))
-                    console.log('login unsuccessful, invalid rollNo');
+                    console.log('login unsuccessful');
                 }
             }else if(body.requestFor === 'logoutStudent'){
                 loggedOnRoll = 0;

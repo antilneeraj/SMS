@@ -8,11 +8,17 @@ main{
     flex-wrap: wrap;
     overflow-y: auto;
 }
-main::-webkit-scrollbar{
+main::-webkit-scrollbar, .resources::-webkit-scrollbar{
     display: none;
 }
 
 /* main */
+
+.resources{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
 
 #add {
     position: absolute;
