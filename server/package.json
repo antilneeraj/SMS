@@ -4,15 +4,15 @@
   "description": "A web server for SMS dedicated to deal with database.",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antilneeraj/SMS-P.git"
   },
   "author": [
-    "Neeraj",
-    "Love"
+    "Neeraj"
   ],
   "license": "MIT",
   "bugs": {

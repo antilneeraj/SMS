@@ -30,16 +30,29 @@ window.onload = async e => {
             </td>
             <td>
             <div style = 'display: flex;justify-content:center;align-items:center'>1&nbsp;
-                <input type="checkbox">&nbsp;2&nbsp;
-                <input type="checkbox">&nbsp;3&nbsp;
-                <input type="checkbox">
-                <div style='align-items:flex-end;'><img src='../../icons/addCircle.svg' height='25px' alt='add'></div></div>
+                <input type="checkbox" checked>&nbsp;2&nbsp;
+                <input type="checkbox" checked>
+                <div style='align-items:flex-end;cursor:pointer' class='addAssignment'><img src='../../icons/addCircle.svg' height='25px' alt='add'></div></div>
             </td>
             <td><div>https://gpsonipat.ac.in/</div></td>
         `;
         // tr.style.height = document.querySelector(".mainChild").getBoundingClientRect().height/(count+1)+'px';
         tr.lastElementChild.children[0].addEventListener('click', e => window.location.href = e.target.innerHTML);
         document.querySelector('table').append(tr);
+        const addAssignmentBtn = tr.querySelector('.addAssignment');
+        [...addAssignmentBtn.parentElement.children].filter(child => child.tagName.toLowerCase() === 'input').forEach(elem => {
+                elem.addEventListener('change', e => {
+                    for(let i=0;i<1;i++) elem.previousSibling?.remove()
+                    elem.remove()
+            }, {once:true});
+        })
+        addAssignmentBtn.addEventListener('click', e => {
+            addAssignmentBtn.insertAdjacentHTML('beforebegin', `&nbsp;${[...addAssignmentBtn.parentElement.children].filter(child => child.tagName.toLowerCase()==='input').length+1}&nbsp<input type="checkbox" checked>`);
+            addAssignmentBtn.previousElementSibling.addEventListener('change', e => {
+                for(let i=0;i<2;i++) e.target.previousSibling?.remove()
+                e.target.remove()
+            }, {once:true});
+        });
         const progressBar = document.querySelectorAll('[progressBar]')[i];
         // const progressDiv = document.querySelector('[progress]');
         progressBar.setAttribute('style', `
