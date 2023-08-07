@@ -40,6 +40,15 @@ The platform encompasses several key features:
 ![Performance Dashboard](/images/performance_dashboard.png)
 *Performance Dashboard - An insightful overview of student performance and progress.*
 
+## Running the Server
+
+To run the website with backend capabilities, follow these steps:
+
+1. Navigate to the server directory using the command line.
+2. Run the command `node src/index.js`.
+
+Once the server is up and running, the website will be able to fetch data from files and provide a comprehensive experience.
+
 ## Target Audience
 
 Our platform caters to a diverse range of stakeholders:
