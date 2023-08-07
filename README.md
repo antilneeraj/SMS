@@ -2,7 +2,7 @@
 
 Welcome to the web-based platform designed to revolutionize student progress and attendance monitoring within educational institutions. In today's dynamic educational landscape, accurate assessment and tracking of student performance are paramount. Our platform offers a sophisticated solution that empowers educators, administrators, parents, and students to make data-driven decisions for improved learning outcomes.
 
-![Platform Screenshot](/images/platform_screenshot.png)
+![Platform Screenshot](/Overview/image_2023-08-07_123637884.png)
 
 ## Overview
 
@@ -31,14 +31,15 @@ The platform encompasses several key features:
 
 ## Platform Screenshots
 
-![Login Page](/images/login_page.png)
+![Login Page](/Overview/image_2023-08-07_123725292.png)
 *Login Page - Secure access to the platform for educators, administrators, and students.*
 
-![Attendance Tracking](/images/attendance_tracking.png)
+![Attendance Tracking](/Overview/image_2023-08-07_124439754.png)
 *Attendance Tracking - Effortless recording and monitoring of student attendance.*
 
-![Performance Dashboard](/images/performance_dashboard.png)
+![Performance Dashboard](/Overview/image_2023-08-07_124208217.png)
 *Performance Dashboard - An insightful overview of student performance and progress.*
+![Performance Dashboard](Overview/image_2023-08-07_124412780.png)
 
 ## Running the Server
 
