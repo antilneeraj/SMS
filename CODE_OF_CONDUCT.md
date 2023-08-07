@@ -18,7 +18,7 @@ This Code of Conduct applies to all project-related spaces, including GitHub dis
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [project-email@example.com]. All complaints will be reviewed and investigated, and appropriate actions will be taken.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team. All complaints will be reviewed and investigated, and appropriate actions will be taken.
 
 ## Attribution
 
