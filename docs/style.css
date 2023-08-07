@@ -302,8 +302,9 @@ html::-webkit-scrollbar{
 }
 
 .memContainer figure img[aman]{
-  margin-top: 25px;
-  scale: .9;
+  height: 15rem;
+  width: 10rem;
+  transform: translate(21px, -20px);
 }
 
 .name{
