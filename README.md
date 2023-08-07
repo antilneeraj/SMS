@@ -1,4 +1,4 @@
-# Comprehensive Student Progress and Attendance Tracking Platform
+## <p align="center"> Comprehensive Student Progress and Attendance Tracking Platform</p>
 
 Welcome to the web-based platform designed to revolutionize student progress and attendance monitoring within educational institutions. In today's dynamic educational landscape, accurate assessment and tracking of student performance are paramount. Our platform offers a sophisticated solution that empowers educators, administrators, parents, and students to make data-driven decisions for improved learning outcomes.
 
